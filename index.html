@@ -369,50 +369,12 @@ section{padding:100px 0;}
 .area{background:var(--cream);}
 .area-wrap{display:grid;grid-template-columns:1.55fr 1fr;gap:56px;align-items:center;}
 .area-map{
-  position:relative;aspect-ratio:1640/796;border-radius:6px;overflow:hidden;
-  box-shadow:0 20px 40px -14px rgba(0,0,0,.25);
-  border:1px solid var(--line);
-  background:#E8ECEE;
+  position:relative;aspect-ratio:900/380;border-radius:6px;overflow:hidden;
+  box-shadow:0 20px 40px -14px rgba(0,0,0,.35);
+  border:1px solid rgba(0,0,0,.15);
+  background:var(--charcoal);
 }
-.area-map img{width:100%;height:100%;object-fit:cover;display:block;}
-@keyframes pinPulse{0%,100%{opacity:0;transform:scale(1);}50%{opacity:.7;transform:scale(1.7);}}
-.map-pin{
-  position:absolute;z-index:3;
-  transform:translate(-50%,-50%);
-}
-.map-pin .dot{
-  width:14px;height:14px;background:var(--red);border-radius:50%;
-  border:3px solid var(--white);box-shadow:0 4px 10px rgba(139,20,20,.45);
-  position:relative;
-}
-.map-pin.hub .dot{
-  width:22px;height:22px;border-width:4px;box-shadow:0 6px 16px rgba(139,20,20,.55);
-}
-.map-pin.hub .dot:after{
-  content:"";position:absolute;inset:-10px;border-radius:50%;
-  border:2px solid var(--red);opacity:0;
-  animation:pinPulse 2.4s ease-in-out infinite;
-}
-.map-pin .lbl{
-  position:absolute;left:50%;top:calc(100% + 7px);
-  transform:translateX(-50%);white-space:nowrap;
-  background:var(--white);color:var(--charcoal);
-  padding:3px 9px;border-radius:20px;
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11.5px;
-  letter-spacing:.06em;text-transform:uppercase;
-  box-shadow:0 2px 8px rgba(0,0,0,.2);
-}
-.map-pin.hub .lbl{
-  background:var(--red);color:var(--white);font-size:13.5px;
-  padding:4px 12px;top:calc(100% + 10px);
-}
-.map-pin.lbl-above .lbl{top:auto;bottom:calc(100% + 7px);}
-.map-pin.lbl-right .lbl{
-  left:calc(100% + 8px);top:50%;transform:translateY(-50%);
-}
-.map-pin.lbl-left .lbl{
-  left:auto;right:calc(100% + 8px);top:50%;transform:translateY(-50%);
-}
+.area-map svg{width:100%;height:100%;display:block;}
 .area-content h2{font-size:clamp(36px,4vw,48px);color:var(--charcoal);margin:14px 0 16px;}
 .area-content p{color:var(--steel);font-size:16px;margin-bottom:22px;line-height:1.6;}
 .area-list{
@@ -429,10 +391,6 @@ section{padding:100px 0;}
 }
 @media(max-width:900px){
   .area-wrap{grid-template-columns:1fr;gap:36px;}
-  .map-pin .lbl{font-size:10px;padding:2px 7px;}
-  .map-pin.hub .lbl{font-size:12px;padding:3px 10px;}
-  .map-pin .dot{width:11px;height:11px;border-width:2px;}
-  .map-pin.hub .dot{width:18px;height:18px;border-width:3px;}
 }
 
 /* ---------- CONTACT ---------- */
@@ -788,15 +746,106 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
 <section class="area" id="area">
   <div class="wrap">
     <div class="area-wrap">
-      <div class="area-map reveal-item">
-        <img src="service-area-map.jpg" alt="DNA Roofing service area map — Saskatoon and surrounding Saskatchewan communities">
-        <div class="map-pin hub" style="left:52.4%;top:59%"><span class="dot"></span><span class="lbl">Saskatoon</span></div>
-        <div class="map-pin lbl-right" style="left:9.1%;top:3.1%"><span class="dot"></span><span class="lbl">North Battleford</span></div>
-        <div class="map-pin lbl-above" style="left:60%;top:9.8%"><span class="dot"></span><span class="lbl">Rosthern</span></div>
-        <div class="map-pin lbl-right" style="left:57%;top:24.5%"><span class="dot"></span><span class="lbl">Hague</span></div>
-        <div class="map-pin lbl-left" style="left:51%;top:40.2%"><span class="dot"></span><span class="lbl">Warman</span></div>
-        <div class="map-pin lbl-right" style="left:52%;top:44.6%"><span class="dot"></span><span class="lbl">Martensville</span></div>
-        <div class="map-pin lbl-left" style="left:93%;top:52.1%"><span class="dot"></span><span class="lbl">Humboldt</span></div>
+      <div class="area-map reveal-item" aria-label="DNA Roofing service area — Saskatoon and surrounding Saskatchewan communities">
+        <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" role="img">
+          <title>DNA Roofing service area — Saskatchewan</title>
+
+          <!-- background -->
+          <rect width="900" height="380" fill="#1A1D21"/>
+
+          <!-- subtle diagonal hatch -->
+          <defs>
+            <pattern id="hatch" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="24" stroke="#FFFFFF" stroke-opacity="0.025" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="900" height="380" fill="url(#hatch)"/>
+
+          <!-- reach lines from Saskatoon (dashed) -->
+          <g stroke="#B91C1C" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.35" fill="none">
+            <line x1="492" y1="329" x2="64" y2="72"/>    <!-- Lloydminster -->
+            <line x1="492" y1="329" x2="283" y2="183"/>   <!-- N Battleford -->
+            <line x1="492" y1="329" x2="611" y2="89"/>    <!-- Prince Albert -->
+            <line x1="492" y1="329" x2="836" y2="51"/>    <!-- Nipawin -->
+            <line x1="492" y1="329" x2="757" y2="163"/>   <!-- Melfort -->
+            <line x1="492" y1="329" x2="691" y2="313"/>   <!-- Humboldt -->
+          </g>
+
+          <!-- outlying town dots -->
+          <g font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="12.5" letter-spacing="0.06em" fill="#CDD3DA">
+
+            <!-- Lloydminster (top-left) -->
+            <circle cx="64" cy="72" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="76" y="76" text-anchor="start">LLOYDMINSTER</text>
+
+            <!-- North Battleford -->
+            <circle cx="283" cy="183" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="271" y="187" text-anchor="end">NORTH BATTLEFORD</text>
+
+            <!-- Prince Albert -->
+            <circle cx="611" cy="89" r="6" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="623" y="93" text-anchor="start">PRINCE ALBERT</text>
+
+            <!-- Nipawin (top right) -->
+            <circle cx="836" cy="51" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="824" y="55" text-anchor="end">NIPAWIN</text>
+
+            <!-- Melfort -->
+            <circle cx="757" cy="163" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="769" y="167" text-anchor="start">MELFORT</text>
+
+            <!-- Humboldt -->
+            <circle cx="691" cy="313" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="702" y="317" text-anchor="start">HUMBOLDT</text>
+
+            <!-- Rosthern -->
+            <circle cx="535" cy="210" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="547" y="214" text-anchor="start">ROSTHERN</text>
+
+            <!-- Hague -->
+            <circle cx="513" cy="244" r="4.5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="525" y="248" text-anchor="start">HAGUE</text>
+
+            <!-- Warman + Martensville (clustered — one dot, combined label) -->
+            <circle cx="498" cy="286" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
+            <text x="510" y="290" text-anchor="start">WARMAN · MARTENSVILLE</text>
+
+          </g>
+
+          <!-- Saskatoon (HUB) — big pulsing red dot with bold label -->
+          <g>
+            <circle cx="492" cy="329" r="20" fill="none" stroke="#DC2626" stroke-width="2" opacity="0">
+              <animate attributeName="r" values="12;28;12" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="492" cy="329" r="12" fill="#B91C1C" stroke="#F7F5F1" stroke-width="3.5"/>
+            <text x="492" y="362" text-anchor="middle" fill="#DC2626"
+                  font-family="'Barlow Condensed', sans-serif" font-weight="900"
+                  font-size="18" letter-spacing="0.08em">SASKATOON</text>
+          </g>
+
+          <!-- Compass rose (top-right corner) -->
+          <g transform="translate(862, 30)" fill="#6B7280" stroke="#6B7280">
+            <text x="0" y="0" text-anchor="middle" font-family="'Barlow Condensed', sans-serif"
+                  font-weight="800" font-size="12" stroke="none">N</text>
+            <line x1="0" y1="6" x2="0" y2="24" stroke-width="1.5"/>
+            <polygon points="0,4 -4,12 4,12" stroke="none" fill="#6B7280"/>
+          </g>
+
+          <!-- Scale bar (bottom-left) -->
+          <g transform="translate(28, 358)" stroke="#6B7280" fill="#6B7280">
+            <line x1="0" y1="0" x2="90" y2="0" stroke-width="1.5"/>
+            <line x1="0" y1="-4" x2="0" y2="4" stroke-width="1.5"/>
+            <line x1="90" y1="-4" x2="90" y2="4" stroke-width="1.5"/>
+            <text x="45" y="16" text-anchor="middle" font-family="'Barlow Condensed', sans-serif"
+                  font-weight="700" font-size="10.5" stroke="none">100 KM</text>
+          </g>
+
+          <!-- Province label -->
+          <text x="30" y="30" fill="#6B7280"
+                font-family="'Barlow Condensed', sans-serif" font-weight="700"
+                font-size="12" letter-spacing="0.12em" opacity="0.8">SASKATCHEWAN</text>
+        </svg>
       </div>
       <div class="area-content reveal-item" style="--rd:120ms">
         <div class="eyebrow">Where We Work</div>
