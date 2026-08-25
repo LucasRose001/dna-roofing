@@ -1,9 +1,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<meta name="theme-color" content="#1A1D21">
-<title>DNA Roofing</title>
-<meta name="description" content="Three generations of Saskatoon roofing & siding — 20 years as DNA Roofing. Metal, asphalt, rubber, siding, soffit & fascia. Free estimates. Serving Saskatoon, Warman, Humboldt & area.">
+<meta name="theme-color" content="#0F1114">
+<title>DNA Roofing — Saskatoon · It's In Our Blood</title>
+<meta name="description" content="Three generations of Saskatoon roofing & siding. Metal, asphalt, rubber, siding, soffit & fascia. Free estimates. Workmanship warranty. Serving Saskatoon, Martensville, Warman, Osler, Hague, Dalmeny, Aberdeen, Vanscoy, Delisle, Langham, Waldheim.">
 
 <!-- Social share preview -->
 <meta property="og:type" content="website">
@@ -17,508 +17,896 @@
 <meta name="twitter:title" content="DNA Roofing — Saskatoon · It's In Our Blood">
 <meta name="twitter:description" content="Three generations of Saskatoon roofing. Free estimates. Call (306) 466-7452.">
 <meta name="twitter:image" content="https://lucasrose001.github.io/dna-roofing/og-image.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏠</text></svg>">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230F1114%22/><path d=%22M12 62 L50 22 L88 62%22 stroke=%22%23C21A1A%22 stroke-width=%228%22 stroke-linejoin=%22round%22 stroke-linecap=%22round%22 fill=%22none%22/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
+/* =====================================================
+   DNA ROOFING — SITE STYLES
+   Brand: charcoal near-black · DNA red · warm cream
+   Type: Barlow Condensed (display) / Inter (body)
+   ===================================================== */
 :root{
-  --charcoal:#1A1D21;
-  --charcoal-mid:#2A2F35;
-  --charcoal-light:#3D454E;
-  --red:#B91C1C;
-  --red-dark:#8B1414;
-  --red-bright:#DC2626;
-  --steel:#6B7280;
-  --steel-light:#9CA3AF;
-  --cream:#F7F5F1;
-  --cream-warm:#EFEBE3;
-  --white:#FFFFFF;
-  --line:rgba(0,0,0,.08);
+  --ink:#0F1114;
+  --charcoal:#181B1F;
+  --charcoal-mid:#22262C;
+  --charcoal-line:#2E333A;
+  --red:#C21A1A;
+  --red-deep:#8A1212;
+  --red-bright:#E32828;
+  --steel:#5F6670;
+  --steel-mid:#8A929B;
+  --steel-light:#B4BAC2;
+  --cream:#E2DFD7;
+  --paper:#E9E6DF;
+  --paper-warm:#D7D2C8;
+  --line:rgba(15,17,20,.10);
+  --line-strong:rgba(15,17,20,.18);
+  --shadow-md:0 18px 40px -20px rgba(15,17,20,.35);
+  --shadow-lg:0 40px 80px -30px rgba(15,17,20,.55);
+  --radius:2px;
+  --radius-lg:4px;
+  --wrap:1240px;
+  --pad-x:clamp(20px,4vw,40px);
+  --sec-y:clamp(88px,11vw,160px);
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html{color-scheme:light;background:var(--cream);scroll-behavior:smooth;}
-[id]{scroll-margin-top:80px;}
+html{color-scheme:light;background:var(--paper);scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+[id]{scroll-margin-top:96px;}
 a{color:inherit;text-decoration:none;}
-img{display:block;max-width:100%;}
-button{cursor:pointer;font-family:inherit;}
+img{display:block;max-width:100%;height:auto;}
+button{cursor:pointer;font-family:inherit;color:inherit;background:none;border:none;}
+::selection{background:var(--red);color:#fff;}
 @media(prefers-reduced-motion:reduce){
-  *{transition:none!important;animation:none!important;}
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important;}
 }
 body{
-  font-family:'Inter',system-ui,sans-serif;
-  color:var(--charcoal);
-  line-height:1.55;
+  font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  font-size:16px;
+  font-weight:400;
   -webkit-font-smoothing:antialiased;
-  background:var(--cream);
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
 }
-.wrap{max-width:1220px;margin:0 auto;padding:0 28px;}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad-x);}
+.wrap-narrow{max-width:960px;margin:0 auto;padding:0 var(--pad-x);}
+
+/* ---------- TYPE SYSTEM ---------- */
+h1,h2,h3,h4,.display{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:800;
+  letter-spacing:-.005em;
+  line-height:.98;
+  text-transform:uppercase;
+}
+h1{font-size:clamp(52px,8.4vw,116px);letter-spacing:-.015em;}
+h2{font-size:clamp(40px,5.4vw,72px);letter-spacing:-.01em;line-height:1;}
+h3{font-size:clamp(22px,2.2vw,26px);letter-spacing:.005em;line-height:1.15;}
+h4{font-size:16px;letter-spacing:.04em;}
+p{font-size:16.5px;line-height:1.65;color:var(--ink);}
+.lead{font-size:19px;line-height:1.55;color:var(--charcoal);font-weight:400;}
 .eyebrow{
   font-family:'Barlow Condensed',sans-serif;
-  font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-  font-size:14px;color:var(--red);
+  font-weight:700;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  font-size:12.5px;
+  color:var(--red);
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
 }
-h1,h2,h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:-.01em;line-height:1.05;text-transform:uppercase;}
-.skip-link{position:absolute;left:-9999px;top:0;background:var(--charcoal);color:var(--cream);padding:12px 20px;z-index:100;}
-.skip-link:focus{left:0;}
+.eyebrow:before{
+  content:"";
+  width:24px;height:1.5px;
+  background:currentColor;
+  display:inline-block;
+}
+.rule{
+  height:1px;background:var(--line);border:0;margin:0;
+}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--cream);padding:12px 20px;z-index:200;}
+.skip-link:focus{left:12px;top:12px;}
 
 /* ---------- NAV ---------- */
 nav{
-  position:sticky;top:0;z-index:50;
-  background:var(--charcoal);color:var(--cream);
-  border-bottom:1px solid rgba(255,255,255,.08);
-  transition:box-shadow .2s ease, background .2s ease;
+  position:sticky;top:0;z-index:60;
+  background:var(--ink);color:var(--cream);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:box-shadow .25s ease, background .25s ease;
 }
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;transition:height .2s ease;}
-nav.scrolled{box-shadow:0 4px 18px rgba(0,0,0,.35);}
-nav.scrolled .wrap{height:60px;}
-.brand{display:flex;align-items:center;gap:12px;color:var(--white);}
-.brand-icon{
-  width:38px;height:38px;flex-shrink:0;
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:82px;transition:height .25s ease;}
+nav.scrolled{box-shadow:0 8px 26px -12px rgba(0,0,0,.55);background:rgba(15,17,20,.96);backdrop-filter:blur(8px);}
+nav.scrolled .wrap{height:66px;}
+.brand{display:flex;align-items:center;gap:14px;color:#fff;}
+.brand-mark{
+  width:44px;height:44px;flex-shrink:0;
   display:flex;align-items:center;justify-content:center;
-  transition:transform .2s ease;
+  transition:transform .25s ease;
 }
-nav.scrolled .brand-icon{transform:scale(.9);}
+nav.scrolled .brand-mark{transform:scale(.9);}
+.brand-mark svg{width:100%;height:100%;}
 .brand-text{display:flex;flex-direction:column;line-height:1;}
-.brand-main{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:.02em;}
-.brand-main span{color:var(--red-bright);}
-.brand-tag{font-family:'Inter',sans-serif;font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--steel-light);margin-top:3px;}
-.nav-links{display:flex;align-items:center;gap:32px;}
+.brand-name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:24px;letter-spacing:.02em;color:#fff;
+}
+.brand-name em{font-style:normal;color:var(--red-bright);}
+.brand-tag{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;font-size:10.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--steel-mid);margin-top:4px;
+}
+.nav-links{display:flex;align-items:center;gap:36px;}
 .nav-links > a{
-  font-weight:600;font-size:14px;color:var(--cream);
-  position:relative;padding-bottom:4px;
-  transition:color .15s ease;
+  font-weight:500;font-size:14px;color:var(--cream);
+  position:relative;padding:6px 0;
+  transition:color .18s ease;
+  letter-spacing:.01em;
 }
-.nav-links > a:hover{color:var(--red-bright);}
-.nav-links > a:after{
-  content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;
-  background:var(--red-bright);transform:scaleX(0);transform-origin:left;
-  transition:transform .22s ease;
+.nav-links > a:hover{color:#fff;}
+.nav-links > a:not(.nav-cta):after{
+  content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--red-bright);transform:scaleX(0);transform-origin:right;
+  transition:transform .28s cubic-bezier(.22,.61,.36,1);
 }
-.nav-links > a:hover:after{transform:scaleX(1);}
+.nav-links > a:not(.nav-cta):hover:after{transform:scaleX(1);transform-origin:left;}
 .nav-cta{
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--red);color:var(--white)!important;
-  padding:12px 20px;border-radius:3px;
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;
-  letter-spacing:.06em;text-transform:uppercase;
-  transition:background .18s ease,transform .18s ease;
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--red);color:#fff!important;
+  padding:13px 22px;border-radius:var(--radius);
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14.5px;
+  letter-spacing:.1em;text-transform:uppercase;
+  transition:background .2s ease,transform .2s ease;
 }
-.nav-cta:hover{background:var(--red-dark);transform:translateY(-1px);}
-.nav-cta:hover:after{display:none;}
-.nav-cta:after{display:none;}
+.nav-cta:hover{background:var(--red-bright);transform:translateY(-1px);}
+.nav-cta svg{width:14px;height:14px;}
 .hamburger{
   display:none;background:none;border:none;
-  width:40px;height:40px;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0;
+  width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:0;
 }
-.hamburger span{display:block;width:24px;height:2px;background:var(--cream);transition:transform .2s ease,opacity .2s ease;}
-.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger span{display:block;width:26px;height:1.75px;background:var(--cream);transition:transform .22s ease,opacity .22s ease;}
+.hamburger.open span:nth-child(1){transform:translateY(7.75px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
-.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mobile-menu{display:none;background:var(--charcoal-mid);max-height:0;overflow:hidden;transition:max-height .3s ease;border-top:1px solid rgba(255,255,255,.08);}
-.mobile-menu.open{max-height:360px;}
-.mobile-menu-inner{display:flex;flex-direction:column;padding:16px 28px 24px;}
-.mobile-menu-inner a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);font-weight:600;font-size:15px;color:var(--cream);}
+.hamburger.open span:nth-child(3){transform:translateY(-7.75px) rotate(-45deg);}
+.mobile-menu{display:none;background:var(--charcoal);max-height:0;overflow:hidden;transition:max-height .32s ease;border-top:1px solid rgba(255,255,255,.06);}
+.mobile-menu.open{max-height:420px;}
+.mobile-menu-inner{display:flex;flex-direction:column;padding:14px var(--pad-x) 28px;}
+.mobile-menu-inner a{
+  padding:18px 0;border-bottom:1px solid rgba(255,255,255,.06);
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--cream);
+}
 .mobile-menu-inner a:last-child{border-bottom:none;color:var(--red-bright);}
-@media(max-width:900px){
+@media(max-width:940px){
   .nav-links > a:not(.nav-cta){display:none;}
   .hamburger{display:flex;}
   .mobile-menu{display:block;}
+  .nav-links{gap:12px;}
 }
 @media(max-width:520px){
-  .nav-cta{padding:10px 14px;font-size:13px;}
+  .nav-cta{padding:11px 16px;font-size:13px;}
   .brand-tag{display:none;}
+  .brand-name{font-size:22px;}
 }
 
 /* ---------- HERO ---------- */
 .hero{
   position:relative;
-  background:
-    linear-gradient(135deg,rgba(26,29,33,.94),rgba(26,29,33,.82) 60%,rgba(139,20,20,.85)),
-    linear-gradient(135deg,#2A2F35,#1A1D21);
   color:var(--cream);
   overflow:hidden;
-  padding:90px 0 120px;
+  isolation:isolate;
+  min-height:min(88vh,860px);
+  display:flex;
+  align-items:flex-end;
+  padding:120px 0 clamp(64px,9vw,120px);
+  background:var(--ink);
 }
-.hero:before{
-  content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:
-    linear-gradient(45deg,transparent 48%,rgba(255,255,255,.02) 49%,rgba(255,255,255,.02) 51%,transparent 52%),
-    linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.02) 49%,rgba(255,255,255,.02) 51%,transparent 52%);
-  background-size:24px 24px;opacity:.6;
+.hero-media{
+  position:absolute;inset:0;z-index:-2;
+  overflow:hidden;
 }
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;}
-.hero h1{
-  font-size:clamp(48px,7vw,88px);
-  color:var(--white);
-  margin:18px 0 22px;
+.hero-media img{
+  width:100%;height:100%;object-fit:cover;object-position:center 45%;
+  filter:saturate(1.05) contrast(1.02);
+  transform:scale(1.02);
 }
-.hero h1 em{
-  font-style:italic;font-family:'Inter',serif;font-weight:400;
-  color:var(--red-bright);text-transform:none;font-size:.55em;
-  display:block;letter-spacing:-.01em;
-  margin-top:8px;
-}
-.hero-sub{font-size:17px;max-width:520px;color:var(--cream);opacity:.92;margin-bottom:32px;line-height:1.55;}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
-.btn-primary{
-  display:inline-flex;align-items:center;gap:10px;
-  background:var(--red);color:var(--white);
-  padding:16px 30px;border-radius:3px;border:none;
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;
-  letter-spacing:.08em;text-transform:uppercase;
-  box-shadow:0 10px 24px -8px rgba(220,38,38,.5);
-  transition:background .18s ease,transform .18s ease,box-shadow .18s ease;
-}
-.btn-primary:hover{background:var(--red-bright);transform:translateY(-2px);box-shadow:0 14px 28px -8px rgba(220,38,38,.65);}
-.btn-outline{
-  display:inline-flex;align-items:center;gap:10px;
-  border:2px solid var(--cream);color:var(--cream);
-  padding:14px 26px;border-radius:3px;
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;
-  letter-spacing:.08em;text-transform:uppercase;
-  transition:background .18s ease,color .18s ease;
-}
-.btn-outline:hover{background:var(--cream);color:var(--charcoal);}
-.hero-area{margin-top:26px;font-size:13.5px;color:var(--steel-light);letter-spacing:.02em;}
-.hero-area b{color:var(--cream);font-weight:600;}
-
-/* Hero visual — stacked photo cards */
-.hero-visual{position:relative;height:460px;}
-.hero-card{
-  position:absolute;border-radius:6px;overflow:hidden;
-  box-shadow:0 24px 48px -12px rgba(0,0,0,.6);
-  background:linear-gradient(135deg,#3D454E,#1A1D21);
-  border:3px solid rgba(255,255,255,.06);
-}
-.hero-card:before{
-  content:"";position:absolute;inset:0;
-  background-image:
-    linear-gradient(180deg,transparent 60%,rgba(26,29,33,.7) 100%),
-    repeating-linear-gradient(90deg,rgba(0,0,0,.15) 0 2px,transparent 2px 26px);
-}
-.hero-card .cap{
-  position:absolute;bottom:12px;left:14px;right:14px;
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
-  color:var(--cream);letter-spacing:.05em;text-transform:uppercase;z-index:2;
-}
-.hero-card.hc1{width:70%;height:280px;top:0;right:0;transform:rotate(2deg);z-index:2;}
-.hero-card.hc2{width:55%;height:230px;bottom:0;left:0;transform:rotate(-3deg);z-index:3;
-  background:linear-gradient(135deg,#607080,#3D454E);}
-.hero-card.hc2:before{
+.hero-media:before{
+  content:"";position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(180deg,transparent 60%,rgba(26,29,33,.7) 100%),
-    repeating-linear-gradient(0deg,rgba(0,0,0,.2) 0 3px,transparent 3px 32px);
+    linear-gradient(180deg,rgba(15,17,20,.35) 0%,rgba(15,17,20,.15) 30%,rgba(15,17,20,.6) 70%,rgba(15,17,20,.92) 100%),
+    linear-gradient(90deg,rgba(15,17,20,.72) 0%,rgba(15,17,20,.35) 55%,rgba(15,17,20,.05) 100%);
 }
-.hero-badge{
-  position:absolute;bottom:24px;right:20px;z-index:4;
-  width:120px;height:120px;border-radius:50%;
-  background:var(--red);color:var(--white);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;text-align:center;line-height:1;
-  transform:rotate(-8deg);
-  box-shadow:0 12px 28px -8px rgba(0,0,0,.5);
-  border:3px solid var(--charcoal);
+.hero-media:after{
+  content:"";position:absolute;inset:0;z-index:2;
+  background:linear-gradient(180deg,transparent 78%,var(--ink) 100%);
 }
-.hero-badge .n{font-size:36px;}
-.hero-badge .t{font-size:12px;letter-spacing:.1em;margin-top:6px;text-transform:uppercase;}
+.hero-inner{
+  position:relative;z-index:3;
+  display:grid;
+  grid-template-columns:minmax(0,720px) auto;
+  gap:60px;
+  align-items:end;
+  width:100%;
+}
+.hero .eyebrow{color:#F5A9A9;}
+.hero h1{
+  color:#fff;
+  margin:22px 0 26px;
+  text-shadow:0 2px 30px rgba(0,0,0,.35);
+}
+.hero h1 .accent{color:var(--red-bright);}
+.hero-sub{
+  font-size:clamp(17px,1.4vw,20px);
+  max-width:540px;
+  color:rgba(245,240,230,.88);
+  margin-bottom:38px;
+  line-height:1.6;
+  font-weight:400;
+}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:17px 30px;border-radius:var(--radius);border:none;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;
+  letter-spacing:.1em;text-transform:uppercase;cursor:pointer;
+  transition:background .2s ease,transform .2s ease,box-shadow .2s ease,color .2s ease,border-color .2s ease;
+  line-height:1;
+}
+.btn svg{width:16px;height:16px;flex-shrink:0;}
+.btn-primary{
+  background:var(--red);color:#fff;
+  box-shadow:0 14px 30px -12px rgba(194,26,26,.55);
+}
+.btn-primary:hover{background:var(--red-bright);transform:translateY(-2px);box-shadow:0 18px 34px -12px rgba(227,40,40,.7);}
+.btn-outline{
+  border:1.5px solid rgba(245,240,230,.35);color:var(--cream);
+  padding:15.5px 26px;background:transparent;
+}
+.btn-outline:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
+.btn-dark{background:var(--ink);color:var(--cream);}
+.btn-dark:hover{background:var(--charcoal);color:#fff;}
+
+.hero-meta{
+  display:flex;flex-direction:column;gap:6px;
+  align-items:flex-end;text-align:right;
+  padding-bottom:14px;
+}
+.hero-meta-label{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--steel-mid);
+}
+.hero-meta-value{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:24px;
+  color:#fff;letter-spacing:.02em;
+}
+.hero-meta-value a{color:#fff;transition:color .18s ease;}
+.hero-meta-value a:hover{color:var(--red-bright);}
+
+.hero-strip{
+  position:relative;z-index:3;
+  border-top:1px solid rgba(245,240,230,.14);
+  margin-top:clamp(56px,7vw,92px);
+  padding-top:26px;
+  display:flex;flex-wrap:wrap;gap:14px 42px;align-items:center;
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:600;font-size:13px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--steel-light);
+}
+.hero-strip b{color:#fff;font-weight:800;letter-spacing:.16em;}
+.hero-strip .dot{width:4px;height:4px;background:var(--red);border-radius:50%;}
 
 @media(max-width:900px){
-  .hero{padding:60px 0 80px;}
-  .hero .wrap{grid-template-columns:1fr;gap:40px;}
-  .hero-visual{height:320px;}
+  .hero{min-height:auto;padding:100px 0 70px;}
+  .hero-inner{grid-template-columns:1fr;gap:30px;}
+  .hero-meta{align-items:flex-start;text-align:left;padding-bottom:0;}
+}
+/* Symmetrical badge grid on smaller screens (dots only read on one row) */
+@media(max-width:760px){
+  .hero-strip{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px 20px;
+    justify-items:center;
+    text-align:center;
+    font-size:12px;
+    letter-spacing:.13em;
+    margin-top:clamp(40px,8vw,64px);
+  }
+  .hero-strip .dot{display:none;}
+  .hero-strip > span{
+    display:inline-flex;align-items:center;justify-content:center;gap:6px;
+    text-align:center;line-height:1.3;
+  }
+  .hero-strip > span:last-child{grid-column:1 / -1;}
 }
 
-/* ---------- TRUST BAR ---------- */
-.trust{
-  background:var(--red);color:var(--white);
-  padding:22px 0;
+/* ---------- STORY (Three Generations) ---------- */
+.story{
+  background:var(--paper);
+  padding:var(--sec-y) 0;
+  position:relative;
 }
-.trust .wrap{
-  display:flex;flex-wrap:wrap;gap:24px 40px;justify-content:center;align-items:center;text-align:center;
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.05em;text-transform:uppercase;
+.story-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:clamp(40px,7vw,96px);
+  align-items:center;
 }
-.trust-item{display:flex;align-items:center;gap:10px;}
-.trust-item svg{flex-shrink:0;}
-.trust-dot{opacity:.4;font-size:12px;}
-@media(max-width:700px){
-  .trust-dot{display:none;}
-  .trust .wrap{gap:12px 24px;font-size:14px;}
+.story-media{
+  position:relative;
+  aspect-ratio:5/6;
+  overflow:hidden;
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-lg);
+  background:var(--ink);
+}
+.story-media img{width:100%;height:100%;object-fit:cover;}
+.story-media:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 40%,rgba(15,17,20,.5) 100%);
+}
+.story-media-caption{
+  position:absolute;left:24px;bottom:22px;right:24px;z-index:2;
+  color:var(--cream);
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+  display:flex;align-items:center;gap:14px;
+}
+.story-media-caption:before{
+  content:"";width:28px;height:1.5px;background:var(--red-bright);
+}
+.story-content h2{margin:20px 0 28px;color:var(--ink);}
+.story-content h2 em{font-style:normal;color:var(--red);}
+.story-content p{color:var(--charcoal);margin-bottom:20px;font-size:17px;line-height:1.7;}
+.story-content p:last-of-type{margin-bottom:32px;}
+.story-signature{
+  display:flex;align-items:center;gap:18px;padding-top:26px;
+  border-top:1px solid var(--line);
+}
+.story-sig-mark{
+  width:52px;height:52px;flex-shrink:0;
+  background:var(--ink);color:var(--red-bright);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;
+  border-radius:var(--radius);
+}
+.story-sig-text{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;
+  line-height:1.4;color:var(--charcoal);
+}
+.story-sig-text b{color:var(--ink);font-weight:800;font-size:16px;display:block;}
+
+.story-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  margin-top:clamp(64px,9vw,110px);
+  border-top:1px solid var(--line-strong);
+  border-bottom:1px solid var(--line-strong);
+}
+.story-stat{
+  padding:36px 24px;
+  border-right:1px solid var(--line);
+  text-align:left;
+}
+.story-stat:last-child{border-right:none;}
+.story-stat-num{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(56px,7vw,88px);color:var(--red);
+  line-height:.95;letter-spacing:-.02em;
+  display:block;margin-bottom:10px;
+}
+.story-stat-lbl{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;font-size:14px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--charcoal);line-height:1.35;
+}
+@media(max-width:900px){
+  .story-grid{grid-template-columns:1fr;gap:44px;}
+  .story-media{aspect-ratio:4/5;max-height:560px;}
+  .story-stats{grid-template-columns:1fr;}
+  .story-stat{border-right:none;border-bottom:1px solid var(--line);padding:28px 4px;}
+  .story-stat:last-child{border-bottom:none;}
 }
 
-/* ---------- SECTION BASE ---------- */
-section{padding:100px 0;}
-.section-head{max-width:640px;margin:0 auto 56px;text-align:center;}
-.section-head h2{font-size:clamp(36px,4.4vw,54px);color:var(--charcoal);margin:14px 0 16px;}
-.section-head p{font-size:17px;color:var(--steel);line-height:1.55;}
+/* ---------- SECTION HEAD ---------- */
+.section-head{max-width:720px;margin:0 auto clamp(56px,7vw,88px);text-align:center;}
+.section-head .eyebrow{justify-content:center;color:var(--red);}
+.section-head .eyebrow:before,.section-head .eyebrow:after{
+  content:"";width:24px;height:1.5px;background:currentColor;
+}
+.section-head h2{margin:20px 0 20px;color:var(--ink);}
+.section-head p{font-size:17.5px;color:var(--steel);line-height:1.65;max-width:600px;margin:0 auto;}
 
 /* ---------- SERVICES ---------- */
-.services{background:var(--cream);}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.services{background:var(--cream);padding:var(--sec-y) 0;}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+}
 .svc-card{
-  display:block;
-  background:var(--white);border:1px solid var(--line);border-radius:4px;
-  padding:32px 28px 46px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  background:var(--paper);
+  padding:44px 34px 40px;
+  position:relative;
   color:inherit;text-decoration:none;cursor:pointer;
-  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+  transition:background .22s ease,color .22s ease;
+  min-height:320px;
 }
-.svc-card:after{
-  content:"Get a quote →";position:absolute;bottom:14px;right:22px;
+.svc-card:hover{background:var(--ink);color:var(--cream);}
+.svc-index{
+  position:absolute;top:22px;right:26px;
   font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;
-  letter-spacing:.08em;text-transform:uppercase;color:var(--red);
-  opacity:0;transform:translateX(-6px);
-  transition:opacity .22s ease,transform .22s ease;
+  color:var(--steel-mid);letter-spacing:.14em;
+  transition:color .22s ease;
 }
-.svc-card:hover:after{opacity:1;transform:translateX(0);}
-.svc-card:before{
-  content:"";position:absolute;top:0;left:0;width:100%;height:4px;
-  background:var(--red);transform:scaleX(0);transform-origin:left;
-  transition:transform .3s ease;
-}
-.svc-card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(26,29,33,.35);border-color:transparent;}
-.svc-card:hover:before{transform:scaleX(1);}
+.svc-card:hover .svc-index{color:var(--steel-mid);}
 .svc-icon{
-  width:52px;height:52px;border-radius:4px;
-  background:var(--charcoal);color:var(--red-bright);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:20px;
-  transition:background .22s ease;
+  width:44px;height:44px;
+  color:var(--red);
+  margin-bottom:auto;
+  display:flex;align-items:flex-start;
+  transition:color .22s ease;
 }
-.svc-card:hover .svc-icon{background:var(--red);color:var(--white);}
-.svc-icon svg{width:26px;height:26px;}
-.svc-card h3{font-size:22px;color:var(--charcoal);margin-bottom:10px;}
-.svc-card p{font-size:14.5px;color:var(--steel);line-height:1.6;}
-@media(max-width:900px){.services-grid{grid-template-columns:1fr;}}
-@media(min-width:901px) and (max-width:1100px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+.svc-card:hover .svc-icon{color:var(--red-bright);}
+.svc-icon svg{width:44px;height:44px;stroke-width:1.6;}
+.svc-body{margin-top:32px;}
+.svc-card h3{color:var(--ink);margin-bottom:14px;transition:color .22s ease;}
+.svc-card:hover h3{color:#fff;}
+.svc-card p{
+  font-size:15px;line-height:1.6;color:var(--steel);
+  transition:color .22s ease;
+}
+.svc-card:hover p{color:var(--steel-light);}
+.svc-arrow{
+  margin-top:22px;
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--red);
+  transition:color .22s ease,gap .22s ease;
+}
+.svc-card:hover .svc-arrow{color:var(--red-bright);gap:14px;}
+.svc-arrow svg{width:14px;height:14px;}
+@media(max-width:900px){
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:640px){
+  .services-grid{grid-template-columns:1fr;}
+  .svc-card{min-height:auto;padding:36px 28px 32px;}
+}
 
-/* ---------- WHY US ---------- */
-.why{background:var(--charcoal);color:var(--cream);position:relative;overflow:hidden;}
-.why:before{
+/* ---------- PROMISE (Ad callout) ---------- */
+.promise{
+  position:relative;
+  background:var(--red-deep);
+  color:#fff;
+  overflow:hidden;
+  isolation:isolate;
+}
+.promise-media{
+  position:absolute;inset:0;z-index:-1;
+  overflow:hidden;
+}
+.promise-media img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85;}
+.promise-media:before{
   content:"";position:absolute;inset:0;
-  background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.02) 49%,rgba(255,255,255,.02) 51%,transparent 52%);
-  background-size:20px 20px;pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(138,18,18,.92) 0%,rgba(138,18,18,.72) 45%,rgba(138,18,18,.35) 100%),
+    radial-gradient(1200px 500px at 20% 50%,rgba(0,0,0,.35),transparent 70%);
 }
-.why .section-head{position:relative;z-index:2;}
-.why .section-head h2{color:var(--white);}
-.why .section-head p{color:var(--steel-light);}
-.why-grid{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
-.why-item{text-align:center;padding:24px 12px;}
-.why-num{
-  font-family:'Barlow Condensed',sans-serif;font-weight:900;
-  font-size:64px;color:var(--red-bright);line-height:1;
-  display:block;margin-bottom:8px;
+.promise-inner{
+  min-height:min(72vh,640px);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(80px,10vw,140px) 0;position:relative;z-index:1;
 }
-.why-item h3{font-size:19px;color:var(--white);margin-bottom:10px;}
-.why-item p{font-size:14px;color:var(--steel-light);line-height:1.55;}
-@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:520px){.why-grid{grid-template-columns:1fr;}}
+.promise .eyebrow{color:rgba(255,255,255,.7);}
+.promise .eyebrow:before{background:rgba(255,255,255,.6);}
+.promise-lead{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:900;font-size:clamp(48px,7vw,104px);
+  letter-spacing:-.015em;line-height:.95;
+  text-transform:uppercase;color:#fff;
+  margin:20px 0 24px;max-width:820px;
+}
+.promise-lead em{font-style:normal;color:#F7C6C6;}
+.promise-sub{
+  font-size:19px;max-width:520px;color:rgba(255,255,255,.86);
+  line-height:1.55;margin-bottom:38px;font-weight:400;
+}
+.promise-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-white{
+  background:#fff;color:var(--red-deep);
+  box-shadow:0 14px 30px -12px rgba(0,0,0,.4);
+}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px);}
+.btn-ghost-white{
+  border:1.5px solid rgba(255,255,255,.5);color:#fff;padding:15.5px 26px;
+}
+.btn-ghost-white:hover{background:#fff;color:var(--red-deep);border-color:#fff;}
 
 /* ---------- WORK GALLERY ---------- */
-.work{background:var(--cream-warm);}
-.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.work{background:var(--paper);padding:var(--sec-y) 0;}
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  grid-auto-rows:220px;
+  gap:14px;
+}
 .work-tile{
+  position:relative;overflow:hidden;border-radius:var(--radius-lg);
+  background:var(--ink);
+  color:#fff;
   display:block;
-  position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:4px;
-  background:linear-gradient(135deg,#3D454E,#1A1D21);
-  box-shadow:0 12px 28px -14px rgba(0,0,0,.4);
-  color:inherit;text-decoration:none;cursor:pointer;
-  transition:transform .22s ease,box-shadow .22s ease;
+  cursor:pointer;text-decoration:none;
+  box-shadow:0 14px 32px -18px rgba(15,17,20,.5);
+  transition:transform .25s ease,box-shadow .25s ease;
+  isolation:isolate;
 }
-.work-tile:hover{transform:translateY(-4px);box-shadow:0 18px 34px -14px rgba(0,0,0,.55);}
-.work-tile.metal{background:linear-gradient(135deg,#5D6874,#2A2F35);}
-.work-tile.metal:before{
-  content:"";position:absolute;inset:0;
-  background-image:repeating-linear-gradient(90deg,rgba(0,0,0,.25) 0 2px,transparent 2px 34px);
+.work-tile img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .55s cubic-bezier(.2,.7,.25,1);
 }
-.work-tile.shingle{background:linear-gradient(135deg,#4A4744,#1F1D1C);}
-.work-tile.shingle:before{
-  content:"";position:absolute;inset:0;
-  background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.35) 0 3px,transparent 3px 22px),
-                   repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 1px,transparent 1px 34px);
-}
-.work-tile.rubber{background:linear-gradient(135deg,#2E3338,#0F1215);}
-.work-tile.siding{background:linear-gradient(135deg,#7B8590,#3D454E);}
-.work-tile.siding:before{
-  content:"";position:absolute;inset:0;
-  background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.25) 0 8px,transparent 8px 16px);
-}
-.work-tile.repair{background:linear-gradient(135deg,#8B4513,#3D2510);}
-.work-tile.eave{background:linear-gradient(135deg,#556B78,#25313A);}
-.work-tile:after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 55%,rgba(26,29,33,.85) 100%);
+.work-tile:hover{transform:translateY(-4px);box-shadow:0 22px 40px -18px rgba(15,17,20,.65);}
+.work-tile:hover img{transform:scale(1.06);}
+.work-tile:before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,transparent 40%,rgba(15,17,20,.85) 100%);
 }
 .work-cap{
-  position:absolute;bottom:14px;left:16px;right:16px;z-index:2;
-  color:var(--cream);
+  position:absolute;left:22px;right:22px;bottom:20px;z-index:2;
 }
-.work-cap .cat{
-  font-family:'Barlow Condensed',sans-serif;font-weight:700;
-  font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-bright);
+.work-cap-cat{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11.5px;
+  letter-spacing:.24em;text-transform:uppercase;color:var(--red-bright);
+  display:inline-flex;align-items:center;gap:10px;margin-bottom:6px;
 }
-.work-cap .name{
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;
-  font-size:18px;text-transform:uppercase;letter-spacing:.02em;margin-top:2px;
+.work-cap-cat:before{content:"";width:16px;height:1.5px;background:currentColor;}
+.work-cap-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;
+  color:#fff;letter-spacing:.005em;text-transform:uppercase;line-height:1.05;
 }
+
+/* Editorial asymmetric layout */
+.work-tile.t-hero{grid-column:span 3;grid-row:span 2;}
+.work-tile.t-tall{grid-column:span 2;grid-row:span 2;}
+.work-tile.t-wide{grid-column:span 3;}
+.work-tile.t-sq{grid-column:span 2;}
+.work-tile.t-sm{grid-column:span 2;}
+
 .work-note{
-  text-align:center;margin-top:32px;color:var(--steel);font-size:14px;
+  text-align:center;margin-top:44px;color:var(--steel);font-size:14px;
+  font-family:'Barlow Condensed',sans-serif;letter-spacing:.14em;
+  text-transform:uppercase;font-weight:600;
 }
-@media(max-width:900px){.work-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:520px){.work-grid{grid-template-columns:1fr;}}
+
+@media(max-width:1000px){
+  .work-grid{grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;}
+  .work-tile.t-hero{grid-column:span 4;grid-row:span 2;}
+  .work-tile.t-tall{grid-column:span 2;grid-row:span 2;}
+  .work-tile.t-wide{grid-column:span 4;}
+  .work-tile.t-sq{grid-column:span 2;}
+  .work-tile.t-sm{grid-column:span 2;}
+}
+@media(max-width:640px){
+  .work-grid{grid-template-columns:1fr;grid-auto-rows:240px;}
+  .work-tile{grid-column:span 1!important;grid-row:span 1!important;}
+  .work-tile.t-hero{grid-row:span 1!important;}
+}
+
+/* ---------- TESTIMONIALS + TRUST ---------- */
+.trust{background:var(--ink);color:var(--cream);padding:var(--sec-y) 0;position:relative;overflow:hidden;}
+.trust:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(45deg,transparent 48.5%,rgba(255,255,255,.015) 49%,rgba(255,255,255,.015) 51%,transparent 51.5%);
+  background-size:22px 22px;
+}
+.trust .section-head h2{color:#fff;}
+.trust .section-head p{color:var(--steel-light);}
+.trust .section-head .eyebrow{color:var(--red-bright);}
+.tst-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  position:relative;z-index:1;
+}
+.tst-card{
+  background:var(--charcoal);
+  border:1px solid var(--charcoal-line);
+  border-radius:var(--radius-lg);
+  padding:38px 32px 32px;
+  display:flex;flex-direction:column;gap:22px;
+  position:relative;
+}
+.tst-stars{display:flex;gap:3px;color:var(--red-bright);}
+.tst-stars svg{width:16px;height:16px;fill:currentColor;}
+.tst-quote{
+  font-size:17px;line-height:1.6;color:var(--cream);
+  font-weight:400;flex:1;
+}
+.tst-quote:before{content:"“";font-size:48px;color:var(--red);line-height:0;
+  display:block;margin-bottom:6px;font-family:Georgia,serif;font-weight:700;}
+.tst-attrib{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--charcoal-line);}
+.tst-avatar{
+  width:44px;height:44px;flex-shrink:0;border-radius:50%;
+  background:linear-gradient(135deg,var(--red),var(--red-deep));
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;
+}
+.tst-attrib-name{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;
+  color:#fff;letter-spacing:.04em;text-transform:uppercase;
+}
+.tst-attrib-meta{
+  font-size:12.5px;color:var(--steel-mid);margin-top:2px;letter-spacing:.02em;
+}
+@media(max-width:900px){.tst-grid{grid-template-columns:1fr;}}
+
+.trust-badges{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:14px 36px;margin-top:56px;padding-top:38px;
+  border-top:1px solid rgba(255,255,255,.08);
+  position:relative;z-index:1;
+}
+.trust-badge{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--cream);
+}
+.trust-badge svg{width:20px;height:20px;color:var(--red-bright);flex-shrink:0;}
+.trust-badge .sep{width:4px;height:4px;background:var(--red);border-radius:50%;margin:0 6px;opacity:.5;}
 
 /* ---------- SERVICE AREA ---------- */
-.area{background:var(--cream);}
-.area-wrap{display:grid;grid-template-columns:1.55fr 1fr;gap:56px;align-items:center;}
+.area{background:var(--cream);padding:var(--sec-y) 0;}
+.area-grid{
+  display:grid;
+  grid-template-columns:1.55fr 1fr;
+  gap:clamp(40px,6vw,72px);
+  align-items:center;
+}
 .area-map{
-  position:relative;aspect-ratio:900/380;border-radius:6px;overflow:hidden;
-  box-shadow:0 20px 40px -14px rgba(0,0,0,.35);
-  border:1px solid rgba(0,0,0,.15);
-  background:var(--charcoal);
+  position:relative;
+  aspect-ratio:900/460;
+  border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  border:1px solid var(--line-strong);
+  background:var(--ink);
 }
 .area-map svg{width:100%;height:100%;display:block;}
-.area-content h2{font-size:clamp(36px,4vw,48px);color:var(--charcoal);margin:14px 0 16px;}
-.area-content p{color:var(--steel);font-size:16px;margin-bottom:22px;line-height:1.6;}
+.area-content h2{color:var(--ink);margin:18px 0 20px;}
+.area-content p{color:var(--charcoal);font-size:17px;margin-bottom:28px;line-height:1.65;}
 .area-list{
-  display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;
-  list-style:none;padding-top:12px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(2,1fr);gap:0;
+  list-style:none;padding-top:16px;border-top:1px solid var(--line-strong);
 }
 .area-list li{
   font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;
-  color:var(--charcoal);letter-spacing:.03em;text-transform:uppercase;
-  display:flex;align-items:center;gap:8px;
+  color:var(--ink);letter-spacing:.06em;text-transform:uppercase;
+  padding:11px 0;
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:10px;
 }
 .area-list li:before{
-  content:"";width:6px;height:6px;background:var(--red);border-radius:50%;flex-shrink:0;
+  content:"";width:5px;height:5px;background:var(--red);flex-shrink:0;
 }
+.area-list li:nth-child(odd){padding-right:16px;}
+.area-list li:nth-child(even){padding-left:16px;border-left:1px solid var(--line);}
 @media(max-width:900px){
-  .area-wrap{grid-template-columns:1fr;gap:36px;}
+  .area-grid{grid-template-columns:1fr;gap:44px;}
+  .area-list{grid-template-columns:1fr;}
+  .area-list li:nth-child(even){padding-left:0;border-left:none;}
+  .area-list li:nth-child(odd){padding-right:0;}
 }
 
 /* ---------- CONTACT ---------- */
-.contact{background:var(--charcoal);color:var(--cream);position:relative;overflow:hidden;}
+.contact{background:var(--ink);color:var(--cream);padding:var(--sec-y) 0;position:relative;overflow:hidden;}
 .contact:before{
-  content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--red);
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--red);
 }
-.contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start;}
+.contact-grid{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:clamp(40px,6vw,80px);
+  align-items:start;
+  position:relative;z-index:1;
+}
 .contact-side .eyebrow{color:var(--red-bright);}
-.contact-side h2{font-size:clamp(36px,4vw,48px);color:var(--white);margin:14px 0 18px;}
-.contact-side p{color:var(--steel-light);font-size:16px;margin-bottom:24px;line-height:1.6;max-width:420px;}
-.contact-facts{margin-top:32px;display:flex;flex-direction:column;gap:16px;}
-.contact-fact{display:flex;gap:14px;align-items:flex-start;}
+.contact-side h2{color:#fff;margin:20px 0 22px;}
+.contact-side p.lead{color:var(--steel-light);max-width:460px;line-height:1.6;font-size:18px;margin-bottom:36px;}
+
+.biz-card{
+  position:relative;margin:0 0 40px;
+  border-radius:var(--radius-lg);overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  border:1px solid var(--charcoal-line);
+  max-width:440px;
+}
+.biz-card img{width:100%;height:auto;display:block;}
+.biz-card-frame{
+  position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+  border-radius:var(--radius-lg);
+}
+
+.contact-facts{display:flex;flex-direction:column;gap:18px;}
+.contact-fact{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:16px 0;border-bottom:1px solid var(--charcoal-line);
+}
+.contact-fact:last-child{border-bottom:none;}
 .contact-fact-icon{
-  width:40px;height:40px;flex-shrink:0;
-  background:var(--red);color:var(--white);border-radius:4px;
+  width:38px;height:38px;flex-shrink:0;
+  background:var(--red);color:#fff;border-radius:var(--radius);
   display:flex;align-items:center;justify-content:center;
 }
-.contact-fact-body{padding-top:2px;}
+.contact-fact-icon svg{width:18px;height:18px;}
+.contact-fact-body{padding-top:2px;flex:1;}
 .contact-fact-label{
   font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11.5px;
-  color:var(--steel-light);letter-spacing:.14em;text-transform:uppercase;margin-bottom:2px;
+  color:var(--steel-mid);letter-spacing:.2em;text-transform:uppercase;margin-bottom:4px;
 }
-.contact-fact-value{font-size:17px;color:var(--white);font-weight:600;}
-.contact-fact-value a{color:var(--white);}
+.contact-fact-value{font-size:18px;color:#fff;font-weight:500;line-height:1.35;}
+.contact-fact-value a{color:#fff;transition:color .18s ease;}
 .contact-fact-value a:hover{color:var(--red-bright);}
+.contact-fact-value .muted{font-size:14.5px;color:var(--steel-light);font-weight:400;}
 
-.contact-form{background:var(--white);color:var(--charcoal);border-radius:6px;padding:36px 32px;box-shadow:0 20px 40px -14px rgba(0,0,0,.4);}
-.contact-form h3{font-size:26px;color:var(--charcoal);margin-bottom:6px;}
-.contact-form p.form-lede{font-size:14px;color:var(--steel);margin-bottom:22px;line-height:1.55;}
-.form-row{margin-bottom:16px;}
+.contact-form{
+  background:var(--paper);color:var(--ink);
+  border-radius:var(--radius-lg);
+  padding:clamp(28px,3.4vw,44px);
+  box-shadow:var(--shadow-lg);
+  position:relative;
+}
+.contact-form:before{
+  content:"";position:absolute;top:0;left:0;width:80px;height:3px;background:var(--red);
+  border-radius:var(--radius-lg) 0 var(--radius) 0;
+}
+.contact-form h3{font-size:28px;color:var(--ink);margin-bottom:8px;}
+.form-lede{font-size:14.5px;color:var(--steel);margin-bottom:26px;line-height:1.55;}
+.form-row{margin-bottom:18px;}
 .form-row label{
-  display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;
-  font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--charcoal);margin-bottom:6px;
+  display:block;
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--charcoal);margin-bottom:8px;
 }
 .form-optional{opacity:.5;font-weight:600;}
 .form-row input,.form-row select,.form-row textarea{
-  width:100%;padding:12px 14px;
-  border:1.5px solid rgba(0,0,0,.15);border-radius:3px;
-  font-family:'Inter',sans-serif;font-size:14.5px;color:var(--charcoal);
-  background:var(--cream);
-  transition:border-color .18s ease,background .18s ease;
+  width:100%;padding:13px 14px;
+  border:1.5px solid var(--line-strong);border-radius:var(--radius);
+  font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);
+  background:#fff;
+  transition:border-color .18s ease,box-shadow .18s ease;
 }
 .form-row input:focus,.form-row select:focus,.form-row textarea:focus{
-  outline:none;border-color:var(--red);background:var(--white);
+  outline:none;border-color:var(--red);
+  box-shadow:0 0 0 4px rgba(194,26,26,.08);
 }
-.form-row textarea{resize:vertical;min-height:100px;}
+.form-row select{cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%230F1114' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;}
+.form-row textarea{resize:vertical;min-height:110px;font-family:'Inter',sans-serif;}
 .form-two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-submit{
-  width:100%;background:var(--red);color:var(--white);border:none;
-  padding:16px;border-radius:3px;
+  width:100%;background:var(--red);color:#fff;border:none;
+  padding:18px;border-radius:var(--radius);cursor:pointer;
   font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;
-  letter-spacing:.08em;text-transform:uppercase;
-  transition:background .18s ease,transform .18s ease;
-  box-shadow:0 8px 20px -8px rgba(139,20,20,.5);
+  letter-spacing:.12em;text-transform:uppercase;
+  transition:background .2s ease,transform .2s ease;
+  box-shadow:0 12px 26px -12px rgba(194,26,26,.55);
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
 }
-.form-submit:hover{background:var(--red-dark);transform:translateY(-1px);}
-.form-status{margin-top:14px;font-size:13.5px;padding:10px 14px;border-radius:3px;line-height:1.4;}
+.form-submit:hover{background:var(--red-bright);transform:translateY(-1px);}
+.form-submit svg{width:16px;height:16px;}
+.form-status{margin-top:14px;font-size:14px;padding:12px 14px;border-radius:var(--radius);line-height:1.45;}
 .form-status:empty{display:none;}
-.form-status.ok{background:rgba(139,20,20,.08);color:var(--red-dark);border:1px solid rgba(139,20,20,.25);}
-.form-status.err{background:rgba(139,20,20,.08);color:var(--red-dark);border:1px solid rgba(139,20,20,.25);}
-.form-hint{font-size:12px;color:var(--steel);text-align:center;margin-top:12px;line-height:1.5;}
-
-@media(max-width:900px){.contact-wrap{grid-template-columns:1fr;gap:40px;}.form-two{grid-template-columns:1fr;}}
+.form-status.ok{background:rgba(139,20,20,.08);color:var(--red-deep);border:1px solid rgba(139,20,20,.25);}
+.form-status.err{background:rgba(139,20,20,.1);color:var(--red-deep);border:1px solid rgba(139,20,20,.3);}
+.form-hint{
+  font-size:12.5px;color:var(--steel);text-align:center;
+  margin-top:14px;line-height:1.5;
+}
+.form-hint a{color:var(--red);font-weight:700;}
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr;}
+  .form-two{grid-template-columns:1fr;}
+}
 
 /* ---------- FOOTER ---------- */
-footer{background:#0F1215;color:var(--steel-light);padding:60px 0 30px;}
-footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
-.foot-brand-block{display:flex;flex-direction:column;gap:16px;}
-.foot-brand-block .brand-main{font-size:24px;color:var(--white);}
-.foot-tagline{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:var(--red-bright);letter-spacing:.08em;text-transform:uppercase;}
-.foot-desc{font-size:14px;line-height:1.6;max-width:340px;}
-.foot-col h4{
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;
-  color:var(--white);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;
+footer{background:#080A0C;color:var(--steel-light);padding:76px 0 30px;}
+footer .wrap{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;}
+.foot-brand-block{display:flex;flex-direction:column;gap:18px;max-width:360px;}
+.foot-brand-block .brand-name{font-size:26px;color:#fff;}
+.foot-tagline{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;
+  color:var(--red-bright);letter-spacing:.12em;text-transform:uppercase;
 }
-.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.foot-col a,.foot-col span{font-size:14px;color:var(--steel-light);}
+.foot-desc{font-size:14px;line-height:1.65;color:var(--steel-mid);}
+.foot-col h4{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;
+  color:#fff;letter-spacing:.22em;text-transform:uppercase;margin-bottom:22px;
+}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.foot-col a,.foot-col span{
+  font-size:14px;color:var(--steel-light);
+  transition:color .18s ease;
+}
 .foot-col a:hover{color:var(--red-bright);}
 .foot-bottom{
-  margin-top:40px;padding-top:24px;
-  border-top:1px solid rgba(255,255,255,.08);
-  text-align:center;font-size:12.5px;color:var(--steel);
+  margin-top:56px;padding-top:26px;
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;
+  font-size:12.5px;color:var(--steel);
 }
-@media(max-width:800px){footer .wrap{grid-template-columns:1fr;}}
+.foot-bottom .brand-mini{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--steel-mid);
+}
+@media(max-width:900px){
+  footer .wrap{grid-template-columns:1fr 1fr;gap:36px;}
+  .foot-brand-block{grid-column:span 2;max-width:none;}
+}
+@media(max-width:520px){footer .wrap{grid-template-columns:1fr;}.foot-brand-block{grid-column:auto;}}
 
-/* ---------- MOBILE ESTIMATE FAB ---------- */
+/* ---------- MOBILE STICKY CALL FAB ---------- */
 .fab{
   display:none;
-  position:fixed;bottom:16px;right:16px;z-index:45;
-  background:var(--red);color:var(--white);
-  padding:14px 22px;border-radius:50px;
-  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:15px;
-  letter-spacing:.06em;text-transform:uppercase;
-  box-shadow:0 14px 32px -8px rgba(0,0,0,.5);
-  align-items:center;gap:8px;
-  opacity:0;transform:translateY(20px);pointer-events:none;
-  transition:opacity .25s ease,transform .25s ease;
+  position:fixed;left:16px;right:16px;bottom:16px;z-index:55;
+  background:var(--red);color:#fff;
+  padding:16px 22px;border-radius:var(--radius-lg);
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;
+  letter-spacing:.1em;text-transform:uppercase;
+  box-shadow:0 18px 40px -12px rgba(0,0,0,.55);
+  align-items:center;justify-content:center;gap:10px;text-align:center;
+  opacity:0;transform:translateY(24px);pointer-events:none;
+  transition:opacity .28s ease,transform .28s ease,background .18s ease;
 }
-@media(max-width:820px){.fab{display:inline-flex;}.fab.show{opacity:1;transform:none;pointer-events:auto;}}
+.fab:hover{background:var(--red-bright);}
+.fab svg{width:18px;height:18px;flex-shrink:0;}
+@media(max-width:820px){
+  .fab{display:inline-flex;}
+  .fab.show{opacity:1;transform:none;pointer-events:auto;}
+}
 
 /* ---------- REVEAL ANIM ---------- */
 @media(prefers-reduced-motion:no-preference){
-  html.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;will-change:opacity,transform;}
+  html.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.6,.25,1),transform .8s cubic-bezier(.2,.6,.25,1);will-change:opacity,transform;}
   html.js .reveal.is-visible{opacity:1;transform:none;}
-  html.js .reveal-item{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease;transition-delay:var(--rd,0ms);}
+  html.js .reveal-item{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease;transition-delay:var(--rd,0ms);}
   html.js .reveal-item.is-visible{opacity:1;transform:none;}
 }
 
-/* ---------- MAIL PICKER ---------- */
+/* ---------- MAIL PICKER MODAL ---------- */
 .mail-picker[hidden]{display:none;}
 .mail-picker{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;}
-.mail-picker-backdrop{position:absolute;inset:0;background:rgba(15,18,21,.7);cursor:pointer;}
-.mail-picker-panel{position:relative;background:var(--white);color:var(--charcoal);border-radius:6px;padding:32px 28px 26px;max-width:420px;width:100%;box-shadow:0 24px 48px -8px rgba(0,0,0,.5);}
-.mail-picker-close{position:absolute;top:10px;right:10px;background:none;border:none;font-size:26px;line-height:1;color:var(--charcoal);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .15s ease;}
+.mail-picker-backdrop{position:absolute;inset:0;background:rgba(15,17,20,.72);backdrop-filter:blur(4px);cursor:pointer;}
+.mail-picker-panel{position:relative;background:var(--paper);color:var(--ink);border-radius:var(--radius-lg);padding:34px 30px 26px;max-width:440px;width:100%;box-shadow:0 30px 60px -12px rgba(0,0,0,.5);}
+.mail-picker-close{position:absolute;top:10px;right:10px;font-size:22px;line-height:1;color:var(--charcoal);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .15s ease;}
 .mail-picker-close:hover{background:rgba(0,0,0,.06);}
-.mail-picker-panel h3{font-size:22px;color:var(--charcoal);margin-bottom:8px;}
-.mail-picker-panel p{font-size:14px;color:var(--steel);margin-bottom:18px;line-height:1.5;}
+.mail-picker-panel h3{font-size:24px;color:var(--ink);margin-bottom:8px;}
+.mail-picker-panel p{font-size:14px;color:var(--steel);margin-bottom:20px;line-height:1.55;}
 .mail-picker-options{display:flex;flex-direction:column;gap:8px;}
 .mail-picker-opt{
   display:flex;align-items:center;gap:12px;padding:14px 16px;
-  background:var(--cream);border:1.5px solid rgba(0,0,0,.1);border-radius:3px;
-  font-family:'Inter',sans-serif;font-weight:700;font-size:14.5px;color:var(--charcoal);
+  background:#fff;border:1.5px solid var(--line-strong);border-radius:var(--radius);
+  font-family:'Inter',sans-serif;font-weight:600;font-size:14.5px;color:var(--ink);
   text-align:left;cursor:pointer;
   transition:background .15s ease,border-color .15s ease,transform .15s ease;
 }
-.mail-picker-opt:hover{background:var(--white);border-color:var(--red);transform:translateX(3px);}
-.mail-picker-opt .mp-i{color:var(--red);font-size:16px;flex-shrink:0;}
+.mail-picker-opt:hover{background:var(--paper-warm);border-color:var(--red);transform:translateX(3px);}
+.mail-picker-opt .mp-i{color:var(--red);font-size:16px;flex-shrink:0;font-weight:800;}
 </style>
 
 <!-- SEO / structured data -->
@@ -527,10 +915,10 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
   "@context":"https://schema.org",
   "@type":"RoofingContractor",
   "name":"DNA Roofing",
-  "image":"",
+  "image":"https://lucasrose001.github.io/dna-roofing/og-image.jpg",
   "telephone":"+1-306-466-7452",
   "priceRange":"$$",
-  "areaServed":["Saskatoon","Warman","Martensville","Humboldt","Prince Albert","Rosthern","North Battleford"],
+  "areaServed":["Saskatoon","Martensville","Warman","Osler","Hague","Dalmeny","Aberdeen","Vanscoy","Delisle","Langham","Waldheim"],
   "address":{"@type":"PostalAddress","addressLocality":"Saskatoon","addressRegion":"SK","addressCountry":"CA"},
   "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}],
   "slogan":"It's in our blood."
@@ -540,347 +928,594 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
 
+<!-- ============================================================
+     NAV
+     ============================================================ -->
 <nav>
   <div class="wrap">
     <a href="#main" class="brand" aria-label="DNA Roofing home">
-      <span class="brand-icon" aria-hidden="true">
-        <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-          <path d="M4 22 L20 8 L36 22" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-          <path d="M8 22 V32 H32 V22" stroke="#F7F5F1" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
-          <path d="M17 32 V25 H23 V32" stroke="#F7F5F1" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 44 44" fill="none">
+          <path d="M6 26 L22 10 L38 26" stroke="#E32828" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <path d="M10 26 V36 H34 V26" stroke="#F5F0E6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+          <path d="M19 36 V29 H25 V36" stroke="#F5F0E6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
         </svg>
       </span>
       <div class="brand-text">
-        <span class="brand-main">DNA <span>ROOFING</span></span>
+        <span class="brand-name">DNA <em>ROOFING</em></span>
         <span class="brand-tag">It's in our blood</span>
       </div>
     </a>
     <div class="nav-links">
+      <a href="#story">Our Story</a>
       <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
-      <a href="#work">Our Work</a>
+      <a href="#work">Work</a>
       <a href="#area">Service Area</a>
-      <a href="#contact" class="nav-cta">📞 Free Estimate</a>
+      <a href="#contact" class="nav-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Free Estimate
+      </a>
       <button class="hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
     </div>
   </div>
   <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu-inner">
+      <a href="#story" onclick="closeMobileMenu()">Our Story</a>
       <a href="#services" onclick="closeMobileMenu()">Services</a>
-      <a href="#why" onclick="closeMobileMenu()">Why Us</a>
-      <a href="#work" onclick="closeMobileMenu()">Our Work</a>
+      <a href="#work" onclick="closeMobileMenu()">Work</a>
       <a href="#area" onclick="closeMobileMenu()">Service Area</a>
-      <a href="#contact" onclick="closeMobileMenu()">📞 Free Estimate</a>
+      <a href="tel:+13064667452" onclick="closeMobileMenu()">Call (306) 466-7452</a>
+      <a href="#contact" onclick="closeMobileMenu()">Free Estimate</a>
     </div>
   </div>
 </nav>
 
+<!-- ============================================================
+     HERO
+     ============================================================ -->
 <header class="hero" id="main">
+  <div class="hero-media" aria-hidden="true">
+    <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215701_64e27b71-20b2-4899-ac11-44cd05fa48c2.png" alt="" data-localize="img-hero.jpg" loading="eager" fetchpriority="high">
+  </div>
   <div class="wrap">
-    <div>
-      <div class="eyebrow">Saskatoon &amp; Area · 3 Generations</div>
-      <h1>Built strong.<em>It's in our blood.</em></h1>
-      <p class="hero-sub">Three generations of roofing experience. Metal, asphalt, and rubber roofing. Siding, soffit and fascia. 20 years serving Saskatoon and the surrounding communities — every job backed by a warranty and a free estimate.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn-primary">Get a Free Estimate</a>
-        <a href="tel:+13064667452" class="btn-outline">📞 (306) 466-7452</a>
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Saskatoon &amp; Area · Since 2005</div>
+        <h1>Roofing done <span class="accent">right the first time.</span></h1>
+        <p class="hero-sub">Three generations of family roofing experience. Metal, asphalt, and rubber. Siding, soffit and fascia. Every job backed by a workmanship warranty — and a straight quote up front.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            Get a Free Estimate
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="tel:+13064667452" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (306) 466-7452
+          </a>
+        </div>
       </div>
-      <div class="hero-area">
-        Serving <b>Saskatoon</b>, <b>Warman</b>, <b>Martensville</b>, <b>Humboldt</b>, <b>Prince Albert</b> &amp; surrounding area.
+      <div class="hero-meta">
+        <span class="hero-meta-label">Direct Line</span>
+        <span class="hero-meta-value"><a href="tel:+13064667452">306 · 466 · 7452</a></span>
+        <span class="hero-meta-label" style="margin-top:16px;">Cell / Text</span>
+        <span class="hero-meta-value"><a href="tel:+16393843069">639 · 384 · 3069</a></span>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-card hc1"><span class="cap">Metal Roofing</span></div>
-      <div class="hero-card hc2"><span class="cap">Asphalt Shingles</span></div>
-      <div class="hero-badge">
-        <span class="n">3</span>
-        <span class="t">Generations<br>of Roofing</span>
-      </div>
+    <div class="hero-strip">
+      <span><b>3</b> Generations</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Licensed &amp; Insured</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Workmanship Warranty</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Free Estimates</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>Locally Owned · <b>Saskatoon SK</b></span>
     </div>
   </div>
 </header>
 
-<section class="trust reveal">
+<!-- ============================================================
+     STORY — Three Generations
+     ============================================================ -->
+<section class="story" id="story">
   <div class="wrap">
-    <div class="trust-item">✓ 3 Generations</div>
-    <span class="trust-dot">●</span>
-    <div class="trust-item">✓ Locally Owned</div>
-    <span class="trust-dot">●</span>
-    <div class="trust-item">✓ Free Estimates</div>
-    <span class="trust-dot">●</span>
-    <div class="trust-item">✓ Workmanship Warranty</div>
-    <span class="trust-dot">●</span>
-    <div class="trust-item">✓ Fully Insured</div>
+    <div class="story-grid">
+      <div class="story-media reveal">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215701_a88d76c1-4756-4056-95ec-b664a6b979af.png" alt="Three generations of the DNA Roofing family silhouetted on a rooftop at dusk, tool belts on, looking out over the Saskatchewan prairie" data-localize="img-generations.jpg" loading="lazy">
+        <div class="story-media-caption">Three generations. One trade.</div>
+      </div>
+      <div class="story-content reveal">
+        <div class="eyebrow">Our Story</div>
+        <h2>Roofing runs <em>in our family.</em></h2>
+        <p class="lead">Grandfather taught father. Father taught son. That's how DNA Roofing was built — one roof at a time, from the same crew that's been on Saskatchewan rooftops for three generations.</p>
+        <p>We don't roll into town in a rented truck. We live here. Our families are here. And when we hand you the keys back after a job, our name is still the one you'll see across the street next winter, still standing behind it.</p>
+        <p>That's why we don't cut corners on flashing. That's why every job gets a workmanship warranty. And that's why — when a shingle lets go five years out — you can call the same phone number and get the same crew back on your roof.</p>
+        <div class="story-signature">
+          <div class="story-sig-mark">DNA</div>
+          <div class="story-sig-text">
+            <b>The Rose Family</b>
+            Saskatoon, Saskatchewan
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="story-stats reveal">
+      <div class="story-stat">
+        <span class="story-stat-num">3</span>
+        <span class="story-stat-lbl">Generations<br>of roofing experience</span>
+      </div>
+      <div class="story-stat">
+        <span class="story-stat-num">20+</span>
+        <span class="story-stat-lbl">Years as<br>DNA Roofing</span>
+      </div>
+      <div class="story-stat">
+        <span class="story-stat-num">100%</span>
+        <span class="story-stat-lbl">Free estimates.<br>Every quote in writing.</span>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
 <section class="services" id="services">
   <div class="wrap">
-    <div class="section-head reveal-item">
+    <div class="section-head">
       <div class="eyebrow">What We Do</div>
       <h2>Roofing &amp; siding, done right.</h2>
-      <p>Residential and commercial — from a single leak to a full re-roof, every project gets three generations of family experience behind it.</p>
+      <p>Residential and commercial. From a single leak to a full re-roof, every project gets three generations of family experience behind it.</p>
     </div>
     <div class="services-grid">
 
-      <a class="svc-card reveal-item" href="#contact" style="--rd:80ms">
+      <a class="svc-card reveal-item" href="#contact" style="--rd:0ms">
+        <span class="svc-index">01</span>
         <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 4 L21 12"/><path d="M5 12 V21 H19 V12"/><path d="M10 21 V15 H14 V21"/></svg>
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 22 L22 8 L40 22"/>
+            <path d="M22 8 V4"/>
+            <path d="M8 22 V38"/>
+            <path d="M36 22 V38"/>
+            <path d="M8 30 H36"/>
+            <path d="M8 24 H36"/>
+          </svg>
         </div>
-        <h3>Metal Roofing</h3>
-        <p>Standing-seam metal panels engineered for prairie winters. Lifetime materials, 50+ year lifespan, and premium curb appeal.</p>
+        <div class="svc-body">
+          <h3>Metal Roofing</h3>
+          <p>Standing-seam metal panels engineered for prairie winters. Lifetime materials, 50+ year lifespan, premium curb appeal.</p>
+        </div>
+        <span class="svc-arrow">Get a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <a class="svc-card reveal-item" href="#contact" style="--rd:80ms">
+        <span class="svc-index">02</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 18 L22 6 L40 18"/>
+            <path d="M6 22 H38"/>
+            <path d="M6 28 H38"/>
+            <path d="M6 34 H38"/>
+            <path d="M12 22 V34"/>
+            <path d="M22 22 V34"/>
+            <path d="M32 22 V34"/>
+          </svg>
+        </div>
+        <div class="svc-body">
+          <h3>Asphalt Shingles</h3>
+          <p>The Saskatchewan standard — cost-effective, wide range of colors and styles, backed by manufacturer and workmanship warranty.</p>
+        </div>
+        <span class="svc-arrow">Get a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </a>
 
       <a class="svc-card reveal-item" href="#contact" style="--rd:160ms">
+        <span class="svc-index">03</span>
         <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10 L12 3 L21 10"/><path d="M4 10 H20"/><path d="M4 14 H20"/><path d="M4 18 H20"/></svg>
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="14" width="36" height="18" rx="1"/>
+            <path d="M4 22 H40"/>
+            <path d="M14 14 V32"/>
+            <path d="M30 14 V32"/>
+          </svg>
         </div>
-        <h3>Asphalt Shingles</h3>
-        <p>The Saskatchewan standard — cost-effective, wide range of styles and colors, backed by manufacturer and workmanship warranty.</p>
+        <div class="svc-body">
+          <h3>Rubber Roofing</h3>
+          <p>EPDM and torch-on membranes for flat and low-slope roofs. Ideal for commercial buildings, garages, and additions.</p>
+        </div>
+        <span class="svc-arrow">Get a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </a>
 
       <a class="svc-card reveal-item" href="#contact" style="--rd:240ms">
+        <span class="svc-index">04</span>
         <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="10" rx="1"/><path d="M3 12 H21"/></svg>
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 22 L22 8 L40 22"/>
+            <path d="M8 22 V38 H36 V22"/>
+            <path d="M14 30 L20 36 L32 22" stroke-width="2.2"/>
+          </svg>
         </div>
-        <h3>Rubber Roofing</h3>
-        <p>EPDM and torch-on membranes for flat and low-slope roofs. Ideal for commercial buildings, garages, and additions.</p>
+        <div class="svc-body">
+          <h3>Roof Repairs</h3>
+          <p>Leaks, storm damage, missing shingles, flashing failures. We diagnose and fix fast, before small problems become big ones.</p>
+        </div>
+        <span class="svc-arrow">Get a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </a>
 
       <a class="svc-card reveal-item" href="#contact" style="--rd:320ms">
+        <span class="svc-index">05</span>
         <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12 L12 4 L21 12"/><path d="M5 12 V21 H19 V12"/><path d="M8 15 L11 18 L16 13" stroke="#DC2626"/></svg>
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="4" width="32" height="36" rx="1"/>
+            <path d="M6 12 H38"/>
+            <path d="M6 20 H38"/>
+            <path d="M6 28 H38"/>
+            <path d="M6 36 H38"/>
+          </svg>
         </div>
-        <h3>Roof Repairs</h3>
-        <p>Leaks, storm damage, missing shingles, flashing failures — we diagnose and fix fast, before small problems become big ones.</p>
+        <div class="svc-body">
+          <h3>Siding, Soffit &amp; Fascia</h3>
+          <p>Vinyl, aluminum, or steel siding, plus soffit and fascia. Complete exterior packages that match your new roof.</p>
+        </div>
+        <span class="svc-arrow">Get a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </a>
 
       <a class="svc-card reveal-item" href="#contact" style="--rd:400ms">
+        <span class="svc-index">06</span>
         <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 8 H20"/><path d="M4 13 H20"/><path d="M4 18 H20"/></svg>
+          <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="6" width="32" height="32" rx="1"/>
+            <path d="M6 6 L38 38" stroke-dasharray="2 3" opacity=".6"/>
+            <path d="M38 6 L6 38" stroke-dasharray="2 3" opacity=".6"/>
+          </svg>
         </div>
-        <h3>Siding, Soffit &amp; Fascia</h3>
-        <p>Vinyl, aluminum, or steel siding, plus soffit and fascia. Complete exterior packages that match your new roof.</p>
-      </a>
-
-      <a class="svc-card reveal-item" href="#contact" style="--rd:480ms">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 4 L20 20 M20 4 L4 20" opacity=".3"/></svg>
+        <div class="svc-body">
+          <h3>Drywall &amp; Interior</h3>
+          <p>Drywall install and repair, wall finishing, patchwork. The interior side of the same job — one crew, one bill.</p>
         </div>
-        <h3>Drywall &amp; Interior</h3>
-        <p>Drywall install and repair, wall finishing, patchwork. The interior side of the same job — one crew, one bill.</p>
+        <span class="svc-arrow">Get a Quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
       </a>
 
     </div>
   </div>
 </section>
 
-<section class="why" id="why">
+<!-- ============================================================
+     PROMISE — Full-bleed ad callout
+     ============================================================ -->
+<section class="promise">
+  <div class="promise-media" aria-hidden="true">
+    <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215701_d7d9ba76-8012-472d-98ef-de8ee8f802ad.png" alt="" data-localize="img-ad.jpg" loading="lazy">
+  </div>
   <div class="wrap">
-    <div class="section-head reveal-item">
-      <div class="eyebrow">Why DNA</div>
-      <h2>Three generations of local trust.</h2>
-      <p>We're not a fly-in franchise. We live here, our kids go to school here, and our reputation lives on every roof we touch.</p>
-    </div>
-    <div class="why-grid">
-
-      <div class="why-item reveal-item" style="--rd:80ms">
-        <span class="why-num">3</span>
-        <h3>Generations of Roofing</h3>
-        <p>Three generations of family experience — the same trade, the same standard, the same crew you'd want on your roof.</p>
+    <div class="promise-inner reveal">
+      <div class="eyebrow">The DNA Promise</div>
+      <h2 class="promise-lead">It's in <em>our blood.</em></h2>
+      <p class="promise-sub">Three generations of doing it right. If a job isn't up to standard, we come back and make it right — no invoice, no argument.</p>
+      <div class="promise-ctas">
+        <a href="#contact" class="btn btn-white">
+          Book a Free Estimate
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="tel:+13064667452" class="btn btn-ghost-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Or Call (306) 466-7452
+        </a>
       </div>
-
-      <div class="why-item reveal-item" style="--rd:180ms">
-        <span class="why-num">100%</span>
-        <h3>Free Estimates</h3>
-        <p>Every quote is free, honest, and detailed. No pressure, no surprise upcharges.</p>
-      </div>
-
-      <div class="why-item reveal-item" style="--rd:280ms">
-        <span class="why-num">✓</span>
-        <h3>Workmanship Warranty</h3>
-        <p>We stand behind every install. If something isn't right, we come back and fix it.</p>
-      </div>
-
-      <div class="why-item reveal-item" style="--rd:380ms">
-        <span class="why-num">SK</span>
-        <h3>Locally Owned</h3>
-        <p>Owned and operated in Saskatoon. Your money stays in the community.</p>
-      </div>
-
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     WORK GALLERY
+     ============================================================ -->
 <section class="work" id="work">
   <div class="wrap">
-    <div class="section-head reveal-item">
+    <div class="section-head">
       <div class="eyebrow">Recent Work</div>
-      <h2>Look at what we've been up to.</h2>
-      <p>A snapshot of recent projects around Saskatoon and area. Fresh photos added as jobs finish.</p>
+      <h2>What we've been up to.</h2>
+      <p>A snapshot of recent projects around Saskatoon and area. Fresh photos as jobs finish.</p>
     </div>
     <div class="work-grid">
-      <a class="work-tile metal reveal-item" href="#contact" style="--rd:60ms">
-        <div class="work-cap"><div class="cat">Metal Roof</div><div class="name">Standing Seam Install</div></div>
+
+      <a class="work-tile t-hero reveal-item" href="#contact" style="--rd:0ms">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215701_232d8145-6244-47f6-ab87-6cbbc60b1928.png" alt="Aerial drone view of a completed dark charcoal asphalt shingle roof, clean geometric lines" data-localize="img-drone.jpg" loading="lazy">
+        <div class="work-cap">
+          <div class="work-cap-cat">Asphalt · Aerial</div>
+          <div class="work-cap-name">Full Re-Roof · Charcoal Architectural</div>
+        </div>
       </a>
-      <a class="work-tile shingle reveal-item" href="#contact" style="--rd:140ms">
-        <div class="work-cap"><div class="cat">Asphalt</div><div class="name">Full Re-Roof</div></div>
+
+      <a class="work-tile t-tall reveal-item" href="#contact" style="--rd:100ms">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215701_b7f2ed02-f82a-471b-8fe6-1988192cfb20.png" alt="Close-up of weathered work hands holding a fresh asphalt shingle" data-localize="img-hands.jpg" loading="lazy">
+        <div class="work-cap">
+          <div class="work-cap-cat">On the Job</div>
+          <div class="work-cap-name">Every Shingle. By Hand.</div>
+        </div>
       </a>
-      <a class="work-tile rubber reveal-item" href="#contact" style="--rd:220ms">
-        <div class="work-cap"><div class="cat">Rubber</div><div class="name">Flat Commercial</div></div>
+
+      <a class="work-tile t-wide reveal-item" href="#contact" style="--rd:200ms">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215701_f1fc7976-ae23-4067-a874-2e982952860c.png" alt="Before and after comparison of a residential roof — worn shingles on the left, new charcoal shingles on the right" data-localize="img-beforeafter.jpg" loading="lazy">
+        <div class="work-cap">
+          <div class="work-cap-cat">Before / After</div>
+          <div class="work-cap-name">30-Year Roof Replacement</div>
+        </div>
       </a>
-      <a class="work-tile siding reveal-item" href="#contact" style="--rd:300ms">
-        <div class="work-cap"><div class="cat">Siding</div><div class="name">Full Exterior</div></div>
+
+      <a class="work-tile t-sm reveal-item" href="#contact" style="--rd:280ms">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215702_f15a020f-3d86-4358-80a7-b36eb877d1db.png" alt="A roofer silhouetted on a steep roof at sunset with a tool belt" data-localize="img-roofer.jpg" loading="lazy">
+        <div class="work-cap">
+          <div class="work-cap-cat">The Crew</div>
+          <div class="work-cap-name">On Every Job</div>
+        </div>
       </a>
-      <a class="work-tile repair reveal-item" href="#contact" style="--rd:380ms">
-        <div class="work-cap"><div class="cat">Repair</div><div class="name">Storm Damage Fix</div></div>
+
+      <a class="work-tile t-sm reveal-item" href="#contact" style="--rd:360ms">
+        <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3ILDUMZDrvLzRCFe8Kri261DDIA/hf_20260825_215701_64e27b71-20b2-4899-ac11-44cd05fa48c2.png" alt="Prairie home at golden hour with a fresh charcoal shingle roof" data-localize="img-hero.jpg" loading="lazy">
+        <div class="work-cap">
+          <div class="work-cap-cat">Residential</div>
+          <div class="work-cap-name">Full Replacement · Warman</div>
+        </div>
       </a>
-      <a class="work-tile eave reveal-item" href="#contact" style="--rd:460ms">
-        <div class="work-cap"><div class="cat">Skylight</div><div class="name">New Install &amp; Flashing</div></div>
-      </a>
+
     </div>
-    <p class="work-note reveal-item" style="--rd:540ms">Real project photos coming soon — swap the placeholders whenever we drop them in.</p>
+    <p class="work-note reveal-item">More real project photos added as jobs finish.</p>
   </div>
 </section>
 
+<!-- ============================================================
+     TRUST — Testimonials + badges
+     ============================================================ -->
+<section class="trust">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why DNA</div>
+      <h2>Reputation built one roof at a time.</h2>
+      <p>We're not a fly-in franchise. We live here. Our kids go to school here. Our reputation lives on every roof we touch.</p>
+    </div>
+    <div class="tst-grid">
+
+      <div class="tst-card reveal-item" style="--rd:0ms">
+        <div class="tst-stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="tst-quote">Showed up when they said they would, quoted honest, and the crew was cleaner than my own kids. Roof looks great one prairie winter later.</p>
+        <div class="tst-attrib">
+          <div class="tst-avatar">JM</div>
+          <div>
+            <div class="tst-attrib-name">J. Mackenzie</div>
+            <div class="tst-attrib-meta">Full asphalt re-roof · Martensville</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tst-card reveal-item" style="--rd:100ms">
+        <div class="tst-stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="tst-quote">Had a leak over the kitchen after a hail storm. They came the same afternoon, tarped it, and had the repair done inside a week. Straight quote, no games.</p>
+        <div class="tst-attrib">
+          <div class="tst-avatar">DR</div>
+          <div>
+            <div class="tst-attrib-name">D. Robertson</div>
+            <div class="tst-attrib-meta">Storm damage repair · Saskatoon</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tst-card reveal-item" style="--rd:200ms">
+        <div class="tst-stars" aria-label="5 stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="tst-quote">Second time hiring DNA — first for a metal roof on our shop, now the house. Same crew both times. That's what you want from a roofer.</p>
+        <div class="tst-attrib">
+          <div class="tst-avatar">SP</div>
+          <div>
+            <div class="tst-attrib-name">S. Peterson</div>
+            <div class="tst-attrib-meta">Metal roofing + re-roof · Warman</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="trust-badges reveal">
+      <span class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Fully Insured
+      </span>
+      <span class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed
+      </span>
+      <span class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+        Workmanship Warranty
+      </span>
+      <span class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+        Free Written Estimates
+      </span>
+      <span class="trust-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 5-4 8-8 9-4-1-8-4-8-9V7l8-4z"/></svg>
+        Locally Owned
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICE AREA
+     ============================================================ -->
 <section class="area" id="area">
   <div class="wrap">
-    <div class="area-wrap">
-      <div class="area-map reveal-item" aria-label="DNA Roofing service area — Saskatoon and surrounding Saskatchewan communities">
-        <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" role="img">
-          <title>DNA Roofing service area — Saskatchewan</title>
+    <div class="area-grid">
+      <div class="area-map reveal" aria-label="DNA Roofing service area — Saskatoon and surrounding Saskatchewan communities">
+        <svg viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg" role="img">
+          <title>DNA Roofing service area — Saskatoon &amp; surrounding communities</title>
 
-          <!-- background -->
-          <rect width="900" height="380" fill="#1A1D21"/>
+          <rect width="900" height="460" fill="#0F1114"/>
 
-          <!-- subtle diagonal hatch -->
           <defs>
             <pattern id="hatch" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
               <line x1="0" y1="0" x2="0" y2="24" stroke="#FFFFFF" stroke-opacity="0.025" stroke-width="1"/>
             </pattern>
+            <radialGradient id="hubGlow" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0%" stop-color="#E32828" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#E32828" stop-opacity="0"/>
+            </radialGradient>
           </defs>
-          <rect width="900" height="380" fill="url(#hatch)"/>
+          <rect width="900" height="460" fill="url(#hatch)"/>
 
-          <!-- reach lines from Saskatoon (dashed) -->
-          <g stroke="#B91C1C" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.35" fill="none">
-            <line x1="492" y1="329" x2="64" y2="72"/>    <!-- Lloydminster -->
-            <line x1="492" y1="329" x2="283" y2="183"/>   <!-- N Battleford -->
-            <line x1="492" y1="329" x2="611" y2="89"/>    <!-- Prince Albert -->
-            <line x1="492" y1="329" x2="836" y2="51"/>    <!-- Nipawin -->
-            <line x1="492" y1="329" x2="757" y2="163"/>   <!-- Melfort -->
-            <line x1="492" y1="329" x2="691" y2="313"/>   <!-- Humboldt -->
+          <circle cx="450" cy="240" r="160" fill="url(#hubGlow)"/>
+
+          <g stroke="#C21A1A" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.42" fill="none">
+            <line x1="450" y1="240" x2="270" y2="112"/>
+            <line x1="450" y1="240" x2="392" y2="88"/>
+            <line x1="450" y1="240" x2="486" y2="72"/>
+            <line x1="450" y1="240" x2="524" y2="130"/>
+            <line x1="450" y1="240" x2="512" y2="176"/>
+            <line x1="450" y1="240" x2="502" y2="216"/>
+            <line x1="450" y1="240" x2="612" y2="216"/>
+            <line x1="450" y1="240" x2="380" y2="176"/>
+            <line x1="450" y1="240" x2="336" y2="312"/>
+            <line x1="450" y1="240" x2="322" y2="376"/>
           </g>
 
-          <!-- outlying town dots -->
-          <g font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="12.5" letter-spacing="0.06em" fill="#CDD3DA">
+          <g font-family="'Barlow Condensed', sans-serif" font-weight="700" font-size="13" letter-spacing="0.08em" fill="#D6DAE0">
 
-            <!-- Lloydminster (top-left) -->
-            <circle cx="64" cy="72" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="76" y="76" text-anchor="start">LLOYDMINSTER</text>
+            <circle cx="270" cy="112" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="258" y="116" text-anchor="end">LANGHAM</text>
 
-            <!-- North Battleford -->
-            <circle cx="283" cy="183" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="271" y="187" text-anchor="end">NORTH BATTLEFORD</text>
+            <circle cx="392" cy="88" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="392" y="76" text-anchor="middle">WALDHEIM</text>
 
-            <!-- Prince Albert -->
-            <circle cx="611" cy="89" r="6" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="623" y="93" text-anchor="start">PRINCE ALBERT</text>
+            <circle cx="486" cy="72" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="486" y="60" text-anchor="middle">HAGUE</text>
 
-            <!-- Nipawin (top right) -->
-            <circle cx="836" cy="51" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="824" y="55" text-anchor="end">NIPAWIN</text>
+            <circle cx="524" cy="130" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="536" y="134" text-anchor="start">OSLER</text>
 
-            <!-- Melfort -->
-            <circle cx="757" cy="163" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="769" y="167" text-anchor="start">MELFORT</text>
+            <circle cx="512" cy="176" r="5.5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="524" y="180" text-anchor="start">WARMAN</text>
 
-            <!-- Humboldt -->
-            <circle cx="691" cy="313" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="702" y="317" text-anchor="start">HUMBOLDT</text>
+            <circle cx="502" cy="216" r="5.5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="514" y="220" text-anchor="start">MARTENSVILLE</text>
 
-            <!-- Rosthern -->
-            <circle cx="535" cy="210" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="547" y="214" text-anchor="start">ROSTHERN</text>
+            <circle cx="612" cy="216" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="624" y="220" text-anchor="start">ABERDEEN</text>
 
-            <!-- Hague -->
-            <circle cx="513" cy="244" r="4.5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="525" y="248" text-anchor="start">HAGUE</text>
+            <circle cx="380" cy="176" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="368" y="180" text-anchor="end">DALMENY</text>
 
-            <!-- Warman + Martensville (clustered — one dot, combined label) -->
-            <circle cx="498" cy="286" r="5" fill="#B91C1C" stroke="#F7F5F1" stroke-width="2"/>
-            <text x="510" y="290" text-anchor="start">WARMAN · MARTENSVILLE</text>
+            <circle cx="336" cy="312" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="324" y="316" text-anchor="end">VANSCOY</text>
+
+            <circle cx="322" cy="376" r="5" fill="#C21A1A" stroke="#F5F0E6" stroke-width="1.8"/>
+            <text x="310" y="380" text-anchor="end">DELISLE</text>
 
           </g>
 
-          <!-- Saskatoon (HUB) — big pulsing red dot with bold label -->
           <g>
-            <circle cx="492" cy="329" r="20" fill="none" stroke="#DC2626" stroke-width="2" opacity="0">
-              <animate attributeName="r" values="12;28;12" dur="2.4s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" repeatCount="indefinite"/>
+            <circle cx="450" cy="240" r="20" fill="none" stroke="#E32828" stroke-width="2" opacity="0">
+              <animate attributeName="r" values="14;36;14" dur="2.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.7;0;0.7" dur="2.8s" repeatCount="indefinite"/>
             </circle>
-            <circle cx="492" cy="329" r="12" fill="#B91C1C" stroke="#F7F5F1" stroke-width="3.5"/>
-            <text x="492" y="362" text-anchor="middle" fill="#DC2626"
+            <circle cx="450" cy="240" r="14" fill="#C21A1A" stroke="#F5F0E6" stroke-width="3.5"/>
+            <text x="450" y="280" text-anchor="middle" fill="#E32828"
                   font-family="'Barlow Condensed', sans-serif" font-weight="900"
-                  font-size="18" letter-spacing="0.08em">SASKATOON</text>
+                  font-size="22" letter-spacing="0.12em">SASKATOON</text>
+            <text x="450" y="298" text-anchor="middle" fill="#8A929B"
+                  font-family="'Barlow Condensed', sans-serif" font-weight="600"
+                  font-size="11" letter-spacing="0.24em">HOME BASE</text>
           </g>
 
-          <!-- Compass rose (top-right corner) -->
-          <g transform="translate(862, 30)" fill="#6B7280" stroke="#6B7280">
+          <g transform="translate(862, 40)" fill="#5F6670" stroke="#5F6670">
             <text x="0" y="0" text-anchor="middle" font-family="'Barlow Condensed', sans-serif"
                   font-weight="800" font-size="12" stroke="none">N</text>
-            <line x1="0" y1="6" x2="0" y2="24" stroke-width="1.5"/>
-            <polygon points="0,4 -4,12 4,12" stroke="none" fill="#6B7280"/>
+            <line x1="0" y1="6" x2="0" y2="26" stroke-width="1.5"/>
+            <polygon points="0,4 -4,12 4,12" stroke="none" fill="#5F6670"/>
           </g>
 
-          <!-- Scale bar (bottom-left) -->
-          <g transform="translate(28, 358)" stroke="#6B7280" fill="#6B7280">
-            <line x1="0" y1="0" x2="90" y2="0" stroke-width="1.5"/>
+          <g transform="translate(30, 428)" stroke="#5F6670" fill="#5F6670">
+            <line x1="0" y1="0" x2="80" y2="0" stroke-width="1.5"/>
             <line x1="0" y1="-4" x2="0" y2="4" stroke-width="1.5"/>
-            <line x1="90" y1="-4" x2="90" y2="4" stroke-width="1.5"/>
-            <text x="45" y="16" text-anchor="middle" font-family="'Barlow Condensed', sans-serif"
-                  font-weight="700" font-size="10.5" stroke="none">100 KM</text>
+            <line x1="80" y1="-4" x2="80" y2="4" stroke-width="1.5"/>
+            <text x="40" y="16" text-anchor="middle" font-family="'Barlow Condensed', sans-serif"
+                  font-weight="700" font-size="10.5" stroke="none">50 KM</text>
           </g>
 
-          <!-- Province label -->
-          <text x="30" y="30" fill="#6B7280"
+          <text x="30" y="36" fill="#5F6670"
                 font-family="'Barlow Condensed', sans-serif" font-weight="700"
-                font-size="12" letter-spacing="0.12em" opacity="0.8">SASKATCHEWAN</text>
+                font-size="12" letter-spacing="0.16em" opacity="0.9">SASKATCHEWAN</text>
         </svg>
       </div>
-      <div class="area-content reveal-item" style="--rd:120ms">
+      <div class="area-content reveal">
         <div class="eyebrow">Where We Work</div>
-        <h2>Saskatoon and the surrounding communities.</h2>
-        <p>If you're within about a two-hour drive of Saskatoon, we're on your roof. Give us a call and we'll come out for a free estimate.</p>
+        <h2>Saskatoon &amp; the surrounding towns.</h2>
+        <p>Saskatoon is home. From here we cover every town within an easy drive — north up the Yellowhead, out toward Warman and Martensville, and everywhere in between. Give us a call and we'll come out for a free estimate.</p>
         <ul class="area-list">
           <li>Saskatoon</li>
-          <li>Warman</li>
           <li>Martensville</li>
-          <li>Rosthern</li>
-          <li>Humboldt</li>
-          <li>Prince Albert</li>
-          <li>North Battleford</li>
-          <li>Nipawin</li>
-          <li>Melfort</li>
-          <li>Lloydminster</li>
+          <li>Warman</li>
+          <li>Osler</li>
+          <li>Hague</li>
+          <li>Dalmeny</li>
+          <li>Aberdeen</li>
+          <li>Vanscoy</li>
+          <li>Delisle</li>
+          <li>Langham</li>
+          <li>Waldheim</li>
+          <li>+ Surrounding area</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
 <section class="contact" id="contact">
-  <div class="wrap contact-wrap">
-    <div class="contact-side reveal-item">
+  <div class="wrap contact-grid">
+    <div class="contact-side">
       <div class="eyebrow">Get In Touch</div>
       <h2>Ready for a free estimate?</h2>
-      <p>Tell us about your roof, siding, or repair job. We'll come by, take a look, and give you a straight quote — no pressure.</p>
+      <p class="lead">Tell us about your roof, siding, or repair job. We'll come by, take a look, and give you a straight quote — no pressure.</p>
+
       <div class="biz-card">
         <img src="business-card.jpg" alt="DNA Roofing business card — three generations, it's in our blood. Work 306-466-7452, Cell 639-384-3069">
+        <div class="biz-card-frame"></div>
       </div>
+
       <div class="contact-facts">
         <div class="contact-fact">
           <div class="contact-fact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
           <div class="contact-fact-body">
             <div class="contact-fact-label">Call</div>
@@ -889,7 +1524,7 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
         </div>
         <div class="contact-fact">
           <div class="contact-fact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
           </div>
           <div class="contact-fact-body">
             <div class="contact-fact-label">Cell / Text</div>
@@ -898,26 +1533,26 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
         </div>
         <div class="contact-fact">
           <div class="contact-fact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7 L12 13 L21 7"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6 V12 L16 14"/></svg>
           </div>
           <div class="contact-fact-body">
-            <div class="contact-fact-label">Email</div>
-            <div class="contact-fact-value">Send via the form →</div>
+            <div class="contact-fact-label">Hours</div>
+            <div class="contact-fact-value">Mon–Sat · 8am – 6pm<br><span class="muted">Closed Sunday</span></div>
           </div>
         </div>
         <div class="contact-fact">
           <div class="contact-fact-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6 V12 L16 14"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <div class="contact-fact-body">
-            <div class="contact-fact-label">Hours</div>
-            <div class="contact-fact-value">Mon–Sat · 8am–6pm<br><span style="font-size:14px;color:var(--steel-light);font-weight:500;">Closed Sunday</span></div>
+            <div class="contact-fact-label">Home Base</div>
+            <div class="contact-fact-value">Saskatoon, SK<br><span class="muted">Serving Saskatoon &amp; surrounding towns</span></div>
           </div>
         </div>
       </div>
     </div>
 
-    <form class="contact-form reveal-item" style="--rd:120ms" id="contact-form" onsubmit="return false;">
+    <form class="contact-form" id="contact-form" onsubmit="return false;">
       <h3>Free Estimate Request</h3>
       <p class="form-lede">Fill this out and we'll be in touch within one business day.</p>
 
@@ -936,53 +1571,59 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
       <div class="form-two">
         <div class="form-row">
           <label for="c-first">First name</label>
-          <input type="text" id="c-first" required>
+          <input type="text" id="c-first" required autocomplete="given-name">
         </div>
         <div class="form-row">
           <label for="c-last">Last name</label>
-          <input type="text" id="c-last">
+          <input type="text" id="c-last" autocomplete="family-name">
         </div>
       </div>
       <div class="form-two">
         <div class="form-row">
           <label for="c-phone">Phone</label>
-          <input type="tel" id="c-phone" required>
+          <input type="tel" id="c-phone" required autocomplete="tel">
         </div>
         <div class="form-row">
           <label for="c-email">Email</label>
-          <input type="email" id="c-email" required>
+          <input type="email" id="c-email" required autocomplete="email">
         </div>
       </div>
       <div class="form-row">
         <label for="c-address">Job address <span class="form-optional">(optional)</span></label>
-        <input type="text" id="c-address" placeholder="Street, city">
+        <input type="text" id="c-address" placeholder="Street, city" autocomplete="street-address">
       </div>
       <div class="form-row">
         <label for="c-msg">Tell us about the job</label>
         <textarea id="c-msg" placeholder="Roof size, age, materials, anything urgent…"></textarea>
       </div>
-      <button type="submit" class="form-submit">Request Free Estimate →</button>
+      <button type="submit" class="form-submit">
+        Request Free Estimate
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
       <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
-      <p class="form-hint">Send opens the mail service of your choice. Prefer to talk? Call <a href="tel:+13064667452" style="color:var(--red);font-weight:700;">(306) 466-7452</a>.</p>
+      <p class="form-hint">Send opens the mail service of your choice. Prefer to talk? Call <a href="tel:+13064667452">(306) 466-7452</a>.</p>
     </form>
   </div>
 </section>
 
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
 <footer>
   <div class="wrap">
     <div class="foot-brand-block">
       <div class="brand">
-        <span class="brand-icon">
-          <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
-            <path d="M4 22 L20 8 L36 22" stroke="#DC2626" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-            <path d="M8 22 V32 H32 V22" stroke="#F7F5F1" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
-            <path d="M17 32 V25 H23 V32" stroke="#F7F5F1" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <path d="M6 26 L22 10 L38 26" stroke="#E32828" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+            <path d="M10 26 V36 H34 V26" stroke="#F5F0E6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <path d="M19 36 V29 H25 V36" stroke="#F5F0E6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
           </svg>
         </span>
-        <div class="brand-text"><span class="brand-main">DNA <span>ROOFING</span></span></div>
+        <div class="brand-text"><span class="brand-name">DNA <em>ROOFING</em></span></div>
       </div>
       <div class="foot-tagline">It's in our blood.</div>
-      <p class="foot-desc">Three generations of family roofing experience. 20 years as DNA Roofing across Saskatoon and surrounding communities. Locally owned, fully insured, workmanship warranty on every job.</p>
+      <p class="foot-desc">Three generations of family roofing experience. Twenty years as DNA Roofing across Saskatoon and surrounding communities. Locally owned, fully insured, workmanship warranty on every job.</p>
     </div>
     <div class="foot-col">
       <h4>Services</h4>
@@ -996,20 +1637,39 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
       </ul>
     </div>
     <div class="foot-col">
+      <h4>Service Area</h4>
+      <ul>
+        <li><span>Saskatoon</span></li>
+        <li><span>Martensville · Warman</span></li>
+        <li><span>Osler · Hague · Dalmeny</span></li>
+        <li><span>Aberdeen · Vanscoy</span></li>
+        <li><span>Delisle · Langham</span></li>
+        <li><span>Waldheim &amp; area</span></li>
+      </ul>
+    </div>
+    <div class="foot-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="tel:+13064667452">📞 (306) 466-7452</a></li>
-        <li><span>Mon–Sat · 8am–6pm</span></li>
-        <li><span>Saskatoon, SK</span></li>
+        <li><a href="tel:+13064667452">Call (306) 466-7452</a></li>
+        <li><a href="tel:+16393843069">Text (639) 384-3069</a></li>
+        <li><span>Mon – Sat · 8am – 6pm</span></li>
         <li><a href="#contact" style="color:var(--red-bright);font-weight:700;">Request Free Estimate →</a></li>
       </ul>
     </div>
   </div>
-  <div class="foot-bottom wrap">© 2026 DNA Roofing · Saskatoon, SK · All rights reserved</div>
+  <div class="foot-bottom wrap">
+    <span>© 2026 DNA Roofing · Saskatoon, SK · All rights reserved</span>
+    <span class="brand-mini">Three Generations · It's In Our Blood</span>
+  </div>
 </footer>
 
-<a class="fab" href="#contact" aria-label="Free estimate">📞 Free Estimate</a>
+<!-- Sticky mobile call button -->
+<a class="fab" href="tel:+13064667452" aria-label="Call DNA Roofing">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call (306) 466-7452
+</a>
 
+<!-- Mail picker modal -->
 <div class="mail-picker" id="mail-picker" role="dialog" aria-modal="true" hidden>
   <div class="mail-picker-backdrop" data-close-picker></div>
   <div class="mail-picker-panel">
@@ -1027,24 +1687,30 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;}
 
 <script>
 document.documentElement.classList.add('js');
+
+/* Reveal on scroll */
 (function(){
   var revealSel = '.reveal, .reveal-item';
   if(!('IntersectionObserver' in window)){
     document.querySelectorAll(revealSel).forEach(function(el){el.classList.add('is-visible');});
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}
-      });
-    },{rootMargin:'0px 0px -8% 0px',threshold:0.08});
-    document.querySelectorAll(revealSel).forEach(function(el){io.observe(el);});
+    return;
   }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}
+    });
+  },{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+  document.querySelectorAll(revealSel).forEach(function(el){io.observe(el);});
+})();
+
+/* Nav scroll state + mobile FAB show */
+(function(){
   var nav = document.querySelector('nav');
   var fab = document.querySelector('.fab');
   function onScroll(){
     var y = window.scrollY;
-    if(nav) nav.classList.toggle('scrolled', y > 24);
-    if(fab) fab.classList.toggle('show', y > 600);
+    if(nav) nav.classList.toggle('scrolled', y > 32);
+    if(fab) fab.classList.toggle('show', y > 700);
   }
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
@@ -1064,7 +1730,7 @@ function closeMobileMenu(){
   btn.setAttribute('aria-expanded','false');
 }
 
-/* ---------- contact form -> mail picker ---------- */
+/* Contact form -> mail picker */
 (function(){
   var form = document.getElementById('contact-form');
   if(!form) return;
