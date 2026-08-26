@@ -799,6 +799,20 @@ nav.scrolled .brand-mark{transform:scale(.9);}
   background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;}
 .form-row textarea{resize:vertical;min-height:110px;font-family:'Inter',sans-serif;}
 .form-two{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+/* SMS consent checkbox */
+.form-consent{margin-bottom:20px;}
+.form-consent .consent-check{
+  display:flex;align-items:flex-start;gap:10px;cursor:pointer;margin:0;
+  font-family:'Inter',sans-serif;font-weight:400;font-size:12.5px;
+  letter-spacing:0;text-transform:none;color:var(--steel);line-height:1.5;
+}
+.form-consent input[type=checkbox]{
+  width:18px;height:18px;margin-top:1px;padding:0;flex-shrink:0;
+  accent-color:var(--red);cursor:pointer;
+}
+.form-consent input[type=checkbox]:focus{
+  outline:2px solid rgba(194,26,26,.4);outline-offset:2px;
+}
 .form-submit{
   width:100%;background:var(--red);color:#fff;border:none;
   padding:18px;border-radius:var(--radius);cursor:pointer;
@@ -1596,6 +1610,12 @@ footer .wrap{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;}
         <label for="c-msg">Tell us about the job</label>
         <textarea id="c-msg" placeholder="Roof size, age, materials, anything urgent…"></textarea>
       </div>
+      <div class="form-row form-consent">
+        <label class="consent-check" for="c-sms-consent">
+          <input type="checkbox" id="c-sms-consent">
+          <span>Yes, DNA Roofing can text me about my project and a review request. Reply STOP anytime. Message &amp; data rates may apply.</span>
+        </label>
+      </div>
       <button type="submit" class="form-submit">
         Request Free Estimate
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -1752,6 +1772,7 @@ function closeMobileMenu(){
     var email = g('c-email').trim();
     var address = g('c-address').trim();
     var msg = g('c-msg').trim();
+    var smsConsent = (document.getElementById('c-sms-consent')||{}).checked ? 'Yes' : 'No';
     if(!first || !phone || !email){
       status.textContent = 'Please fill in your name, phone, and email.';
       status.className = 'form-status err';
@@ -1764,6 +1785,7 @@ function closeMobileMenu(){
       'Name: ' + name + '\n' +
       'Phone: ' + phone + '\n' +
       'Email: ' + email + '\n' +
+      'OK to text (SMS consent): ' + smsConsent + '\n' +
       (address ? 'Job address: ' + address + '\n' : '') +
       '\nMessage:\n' + msg + '\n';
     openPicker({subject: subject, body: body});
